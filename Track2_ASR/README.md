@@ -28,11 +28,9 @@ Transcribe multilingual and code-mixed healthcare conversations across diverse d
 ## 1. Repository Structure (Baseline)
     
 ```text
-DISPLACE-M/
+Track2_ASR/
 ├── data/               # Dataset directory 
-├── models/             # Pretrained and baseline models
 ├── configs/            # Configuration files for evaluation
-├── outputs/            # Output files, logs, and experiment results
 ├── scripts/            # Evaluation scripts
 ├── src/                # Core Python source code
 ├── utils/              # Helper functions and shared utilities
@@ -44,7 +42,7 @@ DISPLACE-M/
 Follow the steps below to set up and run the baseline system.
     
 ### Step 1: Dataset Download
-Please download the DISPLACE-M dataset from the official challenge website:  https://displace2026.github.io/
+Please download the Track_1_ASR_DevData_1 dataset from the official challenge website:  https://displace2026.github.io/ and place it in `data/` folder
 > **Note:** Access may require registration, agreement to the Challenge Terms and Conditions.
 
 ### Step 2: Model Path Setup
