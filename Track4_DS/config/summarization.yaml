@@ -1,0 +1,38 @@
+input_path: "../Track2_ASR/outputs/ASR/fa_asr_predictions"
+gt_path: "./data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv"
+
+columns:
+  rec_id: "rec_id"
+  gt_summary: "gt_summary"
+
+model:
+  name: "meta-llama/Llama-3.2-3B-Instruct"
+  torch_dtype: "float16"
+  device: "cuda"
+  device_map: "auto"
+  hf_token: "<---------------Paste-Your-HF-Token-for-LLAMA-3.2-3B-Instruct-Model-Here--------------->"
+  low_cpu_mem_usage: true
+
+inference:
+  max_new_tokens: 256
+  do_sample: false
+  top_k: 50
+  repetition_penalty: 1.0
+  num_beams: 1
+  use_cache: true
+
+optimization:
+  torch_compile: false
+  batch_size: 1
+
+output:
+  summarization_dir: "./outputs/Summarization"
+  metrics_dir: "./outputs/metrics"
+  summary_pattern: "{rec_id}_summary.txt"
+  asr_pattern: "{rec_id}_fullaudio_transcription.txt"
+
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  log_dir: "./outputs/logs"
