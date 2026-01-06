@@ -13,3 +13,8 @@ geographic region covering different dialects. The dataset presents unique chall
 spontaneous dialogue, foreground speech overlap, background speech, dialectal variation, 
 and environmental noise in rural healthcare settings, making it an unprecedented resource 
 for advancing low-resource, multi-dialect conversational AI.
+
+# Updates
+[06/01/2026] : Phase 1 Development Dataset Released.
+
+[08/01/2026] : Baseline 1 Released.
