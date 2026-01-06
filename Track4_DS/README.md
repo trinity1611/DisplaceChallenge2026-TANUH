@@ -71,7 +71,7 @@ We provide a unified script to run the complete pipeline, which includes **Autom
 ### Execution
 Run the following command to submit the job:
 ```bash
-bash run.sh
+bash run_ds.sh
 ```
 
 **Pipeline Flow:**
