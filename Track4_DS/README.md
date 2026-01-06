@@ -92,9 +92,11 @@ Metrics are saved to: `outputs/metrics/`
 ## 5. Baseline Results
 Baseline results on the development set:
 
-| Metric | Value |
+**Records Processed:** 25
+
+| Metric | Average Score |
 | :--- | :--- |
-| **ROUGE-L** | TBD |
-| **BERTScore** | TBD |
+| **ROUGE-L** | 0.1807 |
+| **BERTScore** | 0.8583 |
 
 > **Note:** These results serve as a reference. Participants are encouraged to improve upon them through model adaptation and decoding strategies.
