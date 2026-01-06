@@ -55,7 +55,9 @@ This baseline uses a pretrained multilingual ASR model from **AI4Bharat**.
 - **Architecture:** Multilingual Conformer-based Hybrid CTC + RNNT ASR  
 - **Parameter Size:** 600M  
 
-Update the corresponding **model paths** in the configuration files located in the `configs/` directory.
+To access the above model, navigate to the model’s page on Hugging Face (HF), log in to your HF account, and follow the instructions provided on the HF model page.
+
+Update your **Hugging Face access token** in the `hf_token` field within the configuration files located in the `configs/` directory.
 
 ### Step 3: Clone the Repository
 ```
