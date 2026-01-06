@@ -28,6 +28,7 @@ Track4_DS/
 ├── src/                # Core Python source code
 ├── utils/              # Helper functions and shared utilities
 ├── requirements.txt    # Python dependencies
+├── run_sh.sh           # Bash File to Run DS
 └── README.md           # Project documentation
 ```
 
