@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/logo.png"  width="50%">
+</p>
+
 # The Third DISPLACE Challenge (2026) - DISPLACE-M 
 ### DIarization and Speech Processing for LAnguage understanding in Conversational Environments – Medical
 
