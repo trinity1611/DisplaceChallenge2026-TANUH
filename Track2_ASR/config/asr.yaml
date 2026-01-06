@@ -1,0 +1,32 @@
+paths:
+  data_dir: "./data"
+  output_dir: "./outputs"
+  logs_dir: "./outputs/logs"
+  diarization_output_dir: "./outputs/SD/per_file_rttm"
+  asr_output_dir: "./outputs/ASR"
+  metrics_output_dir: "./outputs/metrics"
+
+input_asr:
+  input_audio_folder: "./data/Hindi/Audio"
+  input_gt: "./data/Hindi/GT"
+
+output_asr:
+  seg_out_folder: "./outputs/ASR/seg_asr_predictions"
+  fa_out_folder: "./outputs/ASR/fa_asr_predictions"
+
+logging:
+  level: "INFO"
+  format: "[%(asctime)s] [%(levelname)s] [%(name)s] %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+model:
+  model_id: "ai4bharat/indic-conformer-600m-multilingual"
+  device: "cuda"
+  device_map: "auto"
+  hf_token: "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"
+
+language_id: "hi"
+
+decoder:
+  cur_decoder: "rnnt"
+
