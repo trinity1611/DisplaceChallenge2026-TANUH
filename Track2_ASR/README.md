@@ -57,7 +57,7 @@ This baseline uses a pretrained multilingual ASR model from **AI4Bharat**.
 
 To access the above model, navigate to the model’s page on Hugging Face (HF), log in to your HF account, and follow the instructions provided on the HF model page.
 
-Update your **Hugging Face access token** in the `hf_token` field within the configuration files located in the `configs/` directory.
+Update your **Hugging Face access token** in the `hf_token` field within the configuration file located in the `configs/` directory.
 
 ### Step 3: Clone the Repository
 ```
