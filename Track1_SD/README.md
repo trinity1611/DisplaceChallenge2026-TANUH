@@ -15,8 +15,6 @@ For speaker diarization we use the DiariZen model developed by Brno University o
 
 available at the [GitHub repository](https://github.com/BUTSpeechFIT/DiariZen)
 
-### Some details about DiariZen
-
 ## Entire directory structure
 **NOTE:** You only need to create the `data_directory`, which will contain the data, and also the subsequent outputs and scores after making inference. The `data_directory/score` and `data_directory/gen_rttm` will be generted automatically
 
