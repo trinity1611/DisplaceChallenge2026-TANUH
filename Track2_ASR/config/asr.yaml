@@ -23,7 +23,6 @@ model:
   model_id: "ai4bharat/indic-conformer-600m-multilingual"
   device: "cuda"
   device_map: "auto"
-  hf_token: "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"
   hf_token: "" # paste your hf token
 
 language_id: "hi"
