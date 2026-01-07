@@ -63,18 +63,7 @@ cd DISPLACE-2026-Baselines/Track4_DS
 | **2. Generate Token** | Generate a **Hugging Face Token** from your account settings. |
 | **3. Configure** | Update the `hf_token` field in `configs/summarization.yaml` with your token. |
 
-### Installation
-```
-# The same environment created for Track 2 - ASR will work for Track 4 - DS so follow that README.
-# Install dependencies
-pip install -r requirements.txt
-```
-
-## 3. Inference 🚀
-
-To run the DS baselines please follow below steps. 
-
-### Prerequisites
+### ASR Prerequisites
 
 - The DS baseline **requires Automatic Speaker Recognition (ASR) outputs** as input.
 - Change the config file of the Track2_ASR system `input_audio_folder` field with the path of the Track4_DS audio file path and make the `input_gt` field as `None`.
@@ -85,6 +74,17 @@ To run the DS baselines please follow below steps.
 # To run Track 2 - ASR Pipeline
 python ../Track2_ASR/scripts/asr.py
 ```
+
+### Installation
+```
+# The same environment created for Track 2 - ASR will work for Track 4 - DS.
+# Install dependencies
+pip install -r requirements.txt
+```
+
+## 3. Inference 🚀
+
+To run the DS baselines please follow below steps. 
 
 ### Execution
 Run the following script for inference:
