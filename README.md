@@ -2,14 +2,14 @@
   <img src="./assets/logo.png"  width="50%">
 </p>
 
-# The Third DISPLACE Challenge (2026) - DISPLACE-M 
-### DIarization and Speech Processing for LAnguage understanding in Conversational Environments – Medical
+# The Third DISPLACE Challenge (2026) - DISPLACE-M
+### Diarization and Speech Processing for Language understanding in Conversational Environments – Medical
 
-**Official Website:** https://displace2026.github.io/
+[![Official Website](https://img.shields.io/badge/Official%20Website-DISPLACE%202026-blue?style=for-the-badge&logo=google-chrome)](https://displace2026.github.io/)
 
 ## About
 Inspired by the previous session of DISPLACE challenge, we have launched the third DISPLACE-M 
-challenge (https://displace2026.github.io/). The DISPLACE-M challenge aims to advance diarization 
+challenge ([Official Website](https://displace2026.github.io/)). The DISPLACE-M challenge aims to advance diarization 
 and speech understanding technologies in real-world healthcare conversations. 
 The DISPLACE-M challenge provides a unique dataset of medical conversations between Community 
 health workers and local residents in two Indian languages, Hindi and Kannada, collected in a wide 

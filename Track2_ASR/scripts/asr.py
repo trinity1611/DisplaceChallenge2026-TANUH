@@ -34,46 +34,58 @@ def run_asr_pipeline(config_dir: str = "./config"):
     logger.info(f'rttm_folder{rttm_folder}')
     logger.info(f'gt_folder {gt_folder}')
 
-    logger.info("Starting RTTM-based ASR transcription")
-    run_transcription(
-        audio_folder=audio_folder,
-        rttm_folder=rttm_folder,
-        seg_out_folder=seg_out_folder,
-        fa_out_folder=fa_out_folder,
-        model_config=asr_config
-    )
-    logger.info("Transcription completed successfully")
+    # logger.info("Starting RTTM-based ASR transcription")
+    # run_transcription(
+    #     audio_folder=audio_folder,
+    #     rttm_folder=rttm_folder,
+    #     seg_out_folder=seg_out_folder,
+    #     fa_out_folder=fa_out_folder,
+    #     model_config=asr_config
+    # )
+    # logger.info("Transcription completed successfully")
     
-    logger.info("Calculating WER / CER")
-    metrics = TranscriptionMetrics.calculate_wer_cer(asr_config, output_file=str(wer_output_file))
-    logger.info(
-                f"ASR Metrics | Records Processed: {metrics['records processed']} "
-                f"Average CER: {metrics['average_cer']:.3f} "
-                f"Average WER: {metrics['average_wer']:.3f}"
+    # ----------------------------------------------------
+    # Calculate metrics if ground-truth exists
+    # ----------------------------------------------------
+    ground_truth_exists = gt_folder.exists() and any(gt_folder.iterdir())
+
+    if ground_truth_exists:
+        logger.info("Calculating WER / CER")
+        metrics = TranscriptionMetrics.calculate_wer_cer(asr_config, output_file=str(wer_output_file))
+        logger.info(
+                    f"ASR Metrics | Records Processed: {metrics['records processed']} "
+                    f"Average CER: {metrics['average_cer']:.3f} "
+                    f"Average WER: {metrics['average_wer']:.3f}"
+                    )
+
+        print(
+            f"ASR Metrics | Records Processed: {metrics['records processed']} "
+            f"Average CER: {metrics['average_cer']:.3f} "
+            f"Average WER: {metrics['average_wer']:.3f}"
+            )
+
+        logger.info("Calculating tcpWER")
+        metrics = TranscriptionMetrics.compute_tcpwer(asr_config, output_file=str(cpwer_output_file), eval_speaker=False)
+        logger.info(
+                f"SD + ASR Metrics | Records Processed: {metrics['records processed']} "
+                f"Average tcpWER: {metrics['average_tcpWER']:.3f}"
                 )
 
-    print(
-        f"ASR Metrics | Records Processed: {metrics['records processed']} "
-        f"Average CER: {metrics['average_cer']:.3f} "
-        f"Average WER: {metrics['average_wer']:.3f}"
-        )
-
-
-    metrics = TranscriptionMetrics.compute_tcpwer(asr_config, output_file=str(cpwer_output_file), eval_speaker=False)
-    logger.info(
+        print(
             f"SD + ASR Metrics | Records Processed: {metrics['records processed']} "
             f"Average tcpWER: {metrics['average_tcpWER']:.3f}"
-             )
-
-    print(
-        f"SD + ASR Metrics | Records Processed: {metrics['records processed']} "
-        f"Average tcpWER: {metrics['average_tcpWER']:.3f}"
-        )
+            )
+    else:
+        logger.info(f"No ground truth found at {gt_folder}")
+        logger.info(f"Skipping WER / CER / tcpWER computation")
+        print(f"No ground truth found at {gt_folder}")
+        print("Skipping WER / CER / tcpWER computation")
+        metrics = None
 
     logger.info("="*80)
     logger.info("ASR Pipeline Completed Successfully")
     logger.info("="*80)
-    return {"status": "success", "metrics": metrics}
+    return {"status": "success", "metrics": metrics}    
 
 
 if __name__ == "__main__":

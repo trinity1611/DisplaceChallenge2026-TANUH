@@ -2,7 +2,7 @@ paths:
   data_dir: "./data"
   output_dir: "./outputs"
   logs_dir: "./outputs/logs"
-  diarization_output_dir: "../Track1_SD/outputs/SD/per_file_rttm"
+  diarization_output_dir: "../Track1_SD/data_directory/gen_rttm"
   asr_output_dir: "./outputs/ASR"
   metrics_output_dir: "./outputs/metrics"
 
@@ -23,6 +23,7 @@ model:
   model_id: "ai4bharat/indic-conformer-600m-multilingual"
   device: "cuda"
   device_map: "auto"
+  hf_token: "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"
   hf_token: "" # paste your hf token
 
 language_id: "hi"

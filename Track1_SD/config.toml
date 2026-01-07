@@ -1,0 +1,34 @@
+[model]
+path = "diarizen.models.eend.model_wavlm_conformer.Model"
+
+[model.args]
+wavlm_src = "wavlm_base_s80_md"
+wavlm_layer_num = 13
+wavlm_feat_dim = 768
+attention_in = 256
+ffn_hidden = 1024
+num_head = 4
+num_layer = 4
+dropout = 0.1
+chunk_size = 16
+use_posi = false
+output_activate_function = false
+selected_channel = 0
+
+[inference.args]
+seg_duration = 16
+segmentation_step = 0.1
+batch_size = 32
+apply_median_filtering = true
+
+[clustering.args]
+method = 'AgglomerativeClustering'
+min_speakers = 2
+max_speakers = 2
+ahc_criterion = "distance"
+ahc_threshold = 0.6
+Fa = 0.07
+Fb = 0.8
+lda_dim = 128
+max_iters = 20
+min_cluster_size = 13
