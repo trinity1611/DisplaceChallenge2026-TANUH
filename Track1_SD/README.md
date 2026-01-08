@@ -118,6 +118,9 @@ Clustering.
 Extracting segmentations.
 Extracting Embeddings.
 Clustering.
+Per-file diarization outputs are availabel in /home/ashwini/DISPLACE/DiarizenBaseline/Hindi_DEV/gen_rttm
+Please refer to data_directory/inf_log.txt for errors
+SCORING ....
 ************************************************
 
               OVERALL DER = 10.54                
