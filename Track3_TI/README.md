@@ -78,6 +78,7 @@ python ../Track2_ASR/scripts/asr.py
 ```
 # Install Dependencies
 # The same environment created for Track 2 - ASR will work for Track 3 - TI.
+# To the Track 2 - ASR environment, install additional dependencies specific to Track3_TI using the command below:
 pip install -r requirements.txt
 ```
 

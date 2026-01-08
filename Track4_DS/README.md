@@ -81,7 +81,7 @@ python ../Track2_ASR/scripts/asr.py
 ### Installation
 ```
 # The same environment created for Track 2 - ASR will work for Track 4 - DS.
-# Install dependencies
+# To the Track 2 - ASR environment, install additional dependencies specific to Track4_DI using the command below:
 pip install -r requirements.txt
 ```
 
