@@ -15,7 +15,7 @@ config_path='config.toml'         			# Path to the config file
 conda activate diarizen
 python3 DiariZen/inference_withConfigFile.py $data_dir_path $dir_containing_files/$wav_dir $dest_dir $config_path 2> inf_log.txt
 conda deactivate
-echo "Per-file diarization outputs are availabel in $data_dir_path/$dest_dir"
+echo "Per-file diarization outputs are availabel in $dest_dir"
 echo "Please refer to inf_log.txt for errors"
 
 ############### Scoring
