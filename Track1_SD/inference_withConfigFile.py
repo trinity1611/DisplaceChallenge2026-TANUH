@@ -15,7 +15,7 @@ else:
    sys.exit(0)
    
 
-out_rttm_dir = os.path.join(data_dir_path, out_rttm_dir)  
+out_rttm_dir = Path(out_rttm_dir)  
 score = True
 
 if not os.path.exists(out_rttm_dir):
