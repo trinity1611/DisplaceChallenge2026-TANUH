@@ -83,7 +83,7 @@ Download `Track_1_SD_DevData_1` from the [Official Website](https://displace2026
 
 ### Inference
 
-Execute the following script comprising a slightly modified version of instructions provided in the GitHub repository of DiariZen. It will clone the DiariZen repository at the present working directory and download the dependencies.
+Execute the following script comprising a slightly modified version of instructions provided in the GitHub repository of DiariZen. It will clone the DiariZen repository at the present working directory and setup the 'diarizen' environment.
 ```bash
 chmod +x setup.sh
 ./setup.sh
