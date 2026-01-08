@@ -100,6 +100,7 @@ In the `run.sh` file, provide the path to the `data_directory` (i.e. `data_dir_p
 - `data_dir_path` to point to the <Track>/data/<Data_file_for_Track> folder (Eg. '../Track2_ASR/data/Track_2_ASR_DevData_1')
 - `dir_containing_files='Hindi'`
 - `wav_dir='Audio'`
+- give desired path for `gen_rttm`
 
 Run the following command to make inference
 ```bash
