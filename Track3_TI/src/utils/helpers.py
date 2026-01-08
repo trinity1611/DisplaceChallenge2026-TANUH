@@ -34,11 +34,9 @@ class TextCleaner:
     def clean_text(text: str) -> str:
         if text is None:
             return ""
-
-        # Normalize whitespace
+        
         text = re.sub(r"\s+", " ", text)
 
-        # Remove non-printable characters
         text = re.sub(r"[^\x20-\x7E\u0900-\u097F]+", " ", text)
 
         return text.strip()

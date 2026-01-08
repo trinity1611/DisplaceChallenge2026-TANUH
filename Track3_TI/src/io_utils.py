@@ -8,8 +8,11 @@ def load_csv(
     translation_column: str = None,
 ):
     """
-    Load CSV and normalize topic columns.
-    Used for GT loading and optional conversation-based pipelines.
+    Load CSV and normalize columns.
+
+    - conversation_column: input text (ASR / dialogue)
+    - topic_column: ground-truth topics (comma-separated)
+    - translation_column: optional translated text column
     """
 
     df = pd.read_csv(path)
@@ -21,9 +24,10 @@ def load_csv(
             .str.strip()
         )
 
+
     if translation_column is not None:
         if translation_column not in df.columns:
-            df[translation_column] = ""  
+            df[translation_column] = ""
         else:
             df[translation_column] = (
                 df[translation_column]
@@ -31,6 +35,7 @@ def load_csv(
                 .astype(str)
                 .str.strip()
             )
+
 
     if topic_column is not None and topic_column in df.columns:
         df[topic_column] = (
@@ -49,24 +54,5 @@ def load_csv(
 
 
 def save_csv(df: pd.DataFrame, path: str):
-    """
-    Saves DataFrame safely to CSV.
-    """
+    
     df.to_csv(path, index=False)
-
-def read_text_file(path: str) -> str:
-    """
-    Reads a text file and returns content as string.
-    Used for ASR transcripts.
-    """
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read().strip()
-
-
-def save_text_file(path: str, text: str):
-    """
-    Saves text to a file.
-    Used for topic predictions.
-    """
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(text.strip())

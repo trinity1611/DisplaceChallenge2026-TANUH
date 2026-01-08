@@ -3,9 +3,7 @@ import torch
 from transformers import pipeline
 from utils.logger import LoggerSetup
 
-
 logger = LoggerSetup.get_logger("translator")
-
 
 class LlamaTranslator:
     """
@@ -20,7 +18,6 @@ class LlamaTranslator:
         logger.info(f"Loading translation model: {self.model_name}")
 
         try:
-            
             torch_dtype = torch.bfloat16
             if isinstance(config["model"].get("torch_dtype"), str):
                 if config["model"]["torch_dtype"] == "float16":
