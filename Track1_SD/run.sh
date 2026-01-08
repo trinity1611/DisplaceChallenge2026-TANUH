@@ -12,11 +12,11 @@ dest_dir='data_directory/gen_rttm'               	# name of the directory where 
 config_path='config.toml'         			# Path to the config file
 
 ############### Speaker diarization using DiariZen
-conda activate dzen_trial
-python3 DiariZen/inference_withConfigFile.py $data_dir_path $dir_containing_files/$wav_dir $dest_dir $config_path 2> $data_dir_path/inf_log.txt
+conda activate diarizen
+python3 DiariZen/inference_withConfigFile.py $data_dir_path $dir_containing_files/$wav_dir $dest_dir $config_path 2> inf_log.txt
 conda deactivate
 echo "Per-file diarization outputs are availabel in $data_dir_path/$dest_dir"
-echo "Please refer to $data_dir_path/inf_log.txt for errors"
+echo "Please refer to inf_log.txt for errors"
 
 ############### Scoring
 echo "SCORING ...."
