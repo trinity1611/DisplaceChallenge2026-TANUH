@@ -80,7 +80,7 @@ chmod +x setup.sh
 ```
 **NOTE:** While running `setup.sh` you may encounter the following error \
 $\color{red}\text{ERROR: Package 'diarizen' requires a different Python: 3.9.25 not in '>=3.10'}$ \
-Do not worry and continue.
+Do not worry and continue since we will be using the files from the `diarizen` folder inside `DiariZen`.
 
 In the `run.sh` file, provide the path to the `data_directory` (i.e. `data_dir_path`) and the path to the `config.py` file accordingly (No need to make any changes if using the setup from the README). Run the following command to make inference
 ```bash
