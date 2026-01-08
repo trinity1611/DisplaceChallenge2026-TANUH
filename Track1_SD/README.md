@@ -19,7 +19,7 @@ available at the [GitHub repository](https://github.com/BUTSpeechFIT/DiariZen)
 
 ## Track Information
 
-This repository is the official baseline implementation for:
+This repository is the official baseline for:
 
 #### **Track 1 – Speaker Diarization (SD)**
 
