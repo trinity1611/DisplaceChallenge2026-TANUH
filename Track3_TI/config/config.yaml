@@ -34,8 +34,7 @@ embedding:
 paths:
   
   input_path: "../Track2_ASR/outputs/ASR/fa_asr_predictions"
-
-  gt_path: "./data/Track_4_DS_DevData_1/Hindi/GT/gt_data_topic_identification.csv"
+  gt_path: "./data/Track_3_TI_DevData_1/Hindi/GT/gt_data_topic_identification.csv"
 
   topic_pred_dir: "./outputs/Prediction_topic"
   metrics_dir: "./outputs/metrics"
