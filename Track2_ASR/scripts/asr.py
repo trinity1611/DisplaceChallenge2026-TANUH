@@ -34,20 +34,20 @@ def run_asr_pipeline(config_dir: str = "./config"):
     logger.info(f'rttm_folder{rttm_folder}')
     logger.info(f'gt_folder {gt_folder}')
 
-    # logger.info("Starting RTTM-based ASR transcription")
-    # run_transcription(
-    #     audio_folder=audio_folder,
-    #     rttm_folder=rttm_folder,
-    #     seg_out_folder=seg_out_folder,
-    #     fa_out_folder=fa_out_folder,
-    #     model_config=asr_config
-    # )
-    # logger.info("Transcription completed successfully")
+    logger.info("Starting RTTM-based ASR transcription")
+    run_transcription(
+        audio_folder=audio_folder,
+        rttm_folder=rttm_folder,
+        seg_out_folder=seg_out_folder,
+        fa_out_folder=fa_out_folder,
+        model_config=asr_config
+    )
+    logger.info("Transcription completed successfully")
     
     # ----------------------------------------------------
     # Calculate metrics if ground-truth exists
     # ----------------------------------------------------
-    ground_truth_exists = gt_folder.exists() and any(gt_folder.iterdir())
+    ground_truth_exists = gt_folder.exists() and any(gt_folder.rglob("*.txt"))
 
     if ground_truth_exists:
         logger.info("Calculating WER / CER")
