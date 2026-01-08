@@ -22,3 +22,30 @@ for advancing low-resource, multi-dialect conversational AI.
 [06/01/2026] : Phase 1 Development Dataset Released.
 
 [08/01/2026] : Baseline 1 Released.
+
+
+5. Contact Us
+    Please reach out to displace2026@gmail.com for any queries.
+
+7. Organizers
+    Team DISPLACE-M
+    - Prof. Sriram Ganapathy | Associate Professor, LEAP Lab, IISc, Bangalore, India 
+    - Dr Dhanya E | Postdoctoral Researcher, LEAP Lab, IISc, Bangalore, India
+    - Noumida A | Postdoctoral Researcher, LEAP Lab, IISc, Bangalore, India
+    - Ankita Meena | M.Tech Student, IISc Bangalore, India
+    - Victor Azad | M.Tech Student, IISc Bangalore, India
+    - Manas Sameer Nanivadekar | Research Intern, IISc Bangalore, India
+    - Prof. Deepu Vijayasenan | Associate Professor, NITK, Surathkal, India
+    - Pratik Roy Chowdhuri | Research Scholar, NITK, Surathkal, India
+    - Ashwini Nagaraj Shenoy | Junior Research Fellow, NITK Surathkal, India
+    - Supreeth A | Junior Research Fellow, NITK Surathkal, India
+    - Dr. Kalluri Shareef Babu | Assistant Professor, UPES Dehradun, India
+    - Dr. Srikanth Raj Chetupalli | Assistant Professor, IIT Bombay, India
+
+
+Indian Institute of Science (IISc), Bangalore-560012, India
+National Institute of Technology Karnataka (NITK), Surathkal-575025, India
+UPES Dehradun, Uttarakhand-248007, India
+Indian Institute of Technology Bombay (IITB), Mumbai-400076, India
+
+########################################################################################
