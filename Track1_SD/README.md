@@ -29,7 +29,7 @@ Segment multilingual and code-mixed healthcare conversations across diverse dial
 **NOTE:** You only need to create the `data_directory`, which will contain the data, and also the subsequent outputs and scores after making inference. The `data_directory/score` and `data_directory/gen_rttm` will be generted automatically
 
 ```
-DisplaceM_SD
+Track1_SD
 |
 └──setup.sh
 |
