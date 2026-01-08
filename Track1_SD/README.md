@@ -92,7 +92,9 @@ chmod +x setup.sh
 $\color{red}\text{ERROR: Package 'diarizen' requires a different Python: 3.9.25 not in '>=3.10'}$ \
 Do not worry and continue since we will be using the files from the `diarizen` folder inside `DiariZen`.
 
-In the `run.sh` file, provide the path to the `data_directory` (i.e. `data_dir_path`) and the path to the `config.py` file accordingly (No need to make any changes if using the setup from the README). Run the following command to make inference
+In the `run.sh` file, provide the path to the `data_directory` (i.e. `data_dir_path`) and the path to the `config.toml` file accordingly (No need to make any changes if using the setup from the README). \
+**NOTE:** If generating the ouput for the other tracks, update `data_directory` with the path to the directory containig the Audio and GT folders, and set `wav_dir=Audio`.
+Run the following command to make inference
 ```bash
 chmod +x run.sh
 ./run.sh
