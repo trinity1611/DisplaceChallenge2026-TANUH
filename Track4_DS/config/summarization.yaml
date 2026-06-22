@@ -1,5 +1,5 @@
 input_path: "../Track2_ASR/outputs/ASR/fa_asr_predictions"
-gt_path: "./data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv"
+gt_path: "./data/Track_4_DS_DevData_1/Hindi/GT/gt_data_summarization.csv"
 
 columns:
   rec_id: "rec_id"

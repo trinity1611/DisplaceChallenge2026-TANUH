@@ -1,0 +1,15 @@
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] Starting ASR Pipeline
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] audio_folder data\Track_2_ASR_DevData_1\Hindi\Audio
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] rttm_folderC:\Users\Hp\DISPLACE-2026-Baselines\Track1_SD\gen_rttm
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] gt_folder data\Track_2_ASR_DevData_1\Hindi\GT
+[2026-06-19 12:37:44] [INFO] [asr_pipeline] Starting RTTM-based ASR transcription
+[2026-06-19 13:35:18] [INFO] [asr_pipeline] Transcription completed successfully
+[2026-06-19 13:35:18] [INFO] [asr_pipeline] Calculating WER / CER
+[2026-06-19 13:35:19] [INFO] [asr_pipeline] ASR Metrics | Records Processed: 78 Average CER: 0.159 Average WER: 0.276
+[2026-06-19 13:35:19] [INFO] [asr_pipeline] Calculating tcpWER
+[2026-06-19 13:35:19] [INFO] [asr_pipeline] SD + ASR Metrics (tcpWER) evaluation skipped because meeteval is not compiled.
+[2026-06-19 13:35:19] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 13:35:19] [INFO] [asr_pipeline] ASR Pipeline Completed Successfully
+[2026-06-19 13:35:19] [INFO] [asr_pipeline] ================================================================================

@@ -1,0 +1,5 @@
+[2026-06-19 12:07:17] [INFO] [asr_metrics] Loading data for WER/CER computation...
+[2026-06-19 12:07:17] [INFO] [asr_metrics] Found 0 predicted transcripts in outputs\ASR\fa_asr_predictions
+[2026-06-19 12:07:17] [INFO] [asr_metrics] Saved metrics to outputs\metrics\asr_cer_wer_results.json
+[2026-06-19 12:07:17] [INFO] [asr_metrics] Average CER: 0.000, WER: 0.000
+[2026-06-19 12:07:17] [WARNING] [asr_metrics] meeteval is not installed. Skipping TCPWER calculation step entirely.

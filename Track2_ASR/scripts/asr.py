@@ -8,7 +8,6 @@ from utils.logger import LoggerSetup
 from utils.helpers import ConfigLoader
 from src.metrics.metric_asr import TranscriptionMetrics
 from src.asr.transcribe_segments import run_transcription
-from utils.logger import LoggerSetup
 
 logger = LoggerSetup.get_logger("asr_pipeline")
 
@@ -65,16 +64,22 @@ def run_asr_pipeline(config_dir: str = "./config"):
             )
 
         logger.info("Calculating tcpWER")
-        metrics = TranscriptionMetrics.compute_tcpwer(asr_config, output_file=str(cpwer_output_file), eval_speaker=False)
-        logger.info(
-                f"SD + ASR Metrics | Records Processed: {metrics['records processed']} "
-                f"Average tcpWER: {metrics['average_tcpWER']:.3f}"
+        tcp_metrics = TranscriptionMetrics.compute_tcpwer(asr_config, output_file=str(cpwer_output_file), eval_speaker=False)
+        
+        # Safe check handling for environments missing 'meeteval' compilation tools
+        if tcp_metrics and 'records processed' in tcp_metrics:
+            logger.info(
+                    f"SD + ASR Metrics | Records Processed: {tcp_metrics['records processed']} "
+                    f"Average tcpWER: {tcp_metrics['average_tcpWER']:.3f}"
+                    )
+            print(
+                f"SD + ASR Metrics | Records Process Processed: {tcp_metrics['records processed']} "
+                f"Average tcpWER: {tcp_metrics['average_tcpWER']:.3f}"
                 )
-
-        print(
-            f"SD + ASR Metrics | Records Processed: {metrics['records processed']} "
-            f"Average tcpWER: {metrics['average_tcpWER']:.3f}"
-            )
+        else:
+            logger.info("SD + ASR Metrics (tcpWER) evaluation skipped because meeteval is not compiled.")
+            print("SD + ASR Metrics (tcpWER) evaluation skipped because meeteval is not compiled.")
+            
     else:
         logger.info(f"No ground truth found at {gt_folder}")
         logger.info(f"Skipping WER / CER / tcpWER computation")

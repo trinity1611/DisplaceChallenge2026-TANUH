@@ -1,0 +1,239 @@
+[2026-06-19 13:35:18] [INFO] [asr_metrics] Loading data for WER/CER computation...
+[2026-06-19 13:35:18] [INFO] [asr_metrics] Found 78 predicted transcripts in outputs\ASR\fa_asr_predictions
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2006763
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2006763.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2006763: CER=0.102, WER=0.199
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2011315
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2011315.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2011315: CER=0.296, WER=0.460
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2024698
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2024698.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2024698: CER=0.226, WER=0.404
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2025454
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2025454.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2025454: CER=0.095, WER=0.185
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2051619
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2051619.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2051619: CER=0.118, WER=0.205
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2104727
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2104727.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2104727: CER=0.197, WER=0.369
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2157582
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2157582.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2157582: CER=0.238, WER=0.390
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2190472
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2190472.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2190472: CER=0.176, WER=0.362
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2215699
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2215699.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2215699: CER=0.242, WER=0.369
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2234940
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2234940.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2234940: CER=0.193, WER=0.351
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2246689
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2246689.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2246689: CER=0.090, WER=0.187
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2289810
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2289810.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2289810: CER=0.178, WER=0.269
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2302262
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2302262.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2302262: CER=0.126, WER=0.213
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2316003
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2316003.txt
+[2026-06-19 13:35:18] [INFO] [asr_metrics] 2316003: CER=0.063, WER=0.135
+[2026-06-19 13:35:18] [INFO] [asr_metrics] rec_id 2324000
+[2026-06-19 13:35:18] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2324000.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2324000: CER=0.267, WER=0.471
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2392867
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2392867.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2392867: CER=0.130, WER=0.239
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2404173
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2404173.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2404173: CER=0.134, WER=0.210
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2408885
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2408885.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2408885: CER=0.110, WER=0.242
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2416907
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2416907.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2416907: CER=0.244, WER=0.351
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2448528
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2448528.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2448528: CER=0.164, WER=0.245
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2472267
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2472267.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2472267: CER=0.104, WER=0.223
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2492647
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2492647.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2492647: CER=0.097, WER=0.180
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2507155
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2507155.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2507155: CER=0.111, WER=0.199
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2508371
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2508371.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2508371: CER=0.180, WER=0.329
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2532454
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2532454.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2532454: CER=0.160, WER=0.270
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2577003
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2577003.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2577003: CER=0.104, WER=0.212
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2627977
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2627977.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2627977: CER=0.139, WER=0.247
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2643195
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2643195.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2643195: CER=0.059, WER=0.176
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2669941
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2669941.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2669941: CER=0.141, WER=0.229
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2690429
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2690429.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2690429: CER=0.200, WER=0.304
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2704391
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2704391.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2704391: CER=0.286, WER=0.454
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2712340
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2712340.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2712340: CER=0.212, WER=0.300
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2720729
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2720729.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2720729: CER=0.281, WER=0.462
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2751425
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2751425.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2751425: CER=0.156, WER=0.291
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2853413
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2853413.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2853413: CER=0.164, WER=0.278
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2859562
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2859562.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2859562: CER=0.111, WER=0.204
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2907609
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2907609.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2907609: CER=0.103, WER=0.195
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2943043
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2943043.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2943043: CER=0.199, WER=0.353
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 2974366
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\2974366.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 2974366: CER=0.184, WER=0.332
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3002815
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3002815.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3002815: CER=0.291, WER=0.518
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3017365
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3017365.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3017365: CER=0.134, WER=0.226
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3116006
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3116006.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3116006: CER=0.279, WER=0.457
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3132933
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3132933.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3132933: CER=0.153, WER=0.239
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3143841
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3143841.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3143841: CER=0.164, WER=0.271
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3150359
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3150359.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3150359: CER=0.111, WER=0.222
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3162464
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3162464.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3162464: CER=0.175, WER=0.293
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3186725
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3186725.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3186725: CER=0.116, WER=0.234
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3228806
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3228806.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3228806: CER=0.166, WER=0.249
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3229783
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3229783.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3229783: CER=0.301, WER=0.476
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3242986
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3242986.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3242986: CER=0.106, WER=0.194
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3303284
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3303284.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3303284: CER=0.081, WER=0.157
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3334594
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3334594.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3334594: CER=0.066, WER=0.124
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3340696
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3340696.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3340696: CER=0.084, WER=0.155
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3385730
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3385730.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3385730: CER=0.126, WER=0.235
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3396231
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3396231.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3396231: CER=0.083, WER=0.160
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3399073
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3399073.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3399073: CER=0.210, WER=0.341
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3413937
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3413937.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3413937: CER=0.083, WER=0.166
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3433042
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3433042.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3433042: CER=0.225, WER=0.386
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3447838
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3447838.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3447838: CER=0.233, WER=0.394
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3499432
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3499432.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3499432: CER=0.272, WER=0.442
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3519376
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3519376.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3519376: CER=0.112, WER=0.196
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3563865
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3563865.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3563865: CER=0.151, WER=0.233
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3618325
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3618325.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3618325: CER=0.272, WER=0.468
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3660167
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3660167.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3660167: CER=0.135, WER=0.222
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3683686
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3683686.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3683686: CER=0.187, WER=0.287
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3704252
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3704252.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3704252: CER=0.128, WER=0.260
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3729840
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3729840.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3729840: CER=0.099, WER=0.195
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3785595
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3785595.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3785595: CER=0.191, WER=0.301
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3801058
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3801058.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3801058: CER=0.185, WER=0.316
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3819695
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3819695.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3819695: CER=0.102, WER=0.202
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3827529
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3827529.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3827529: CER=0.089, WER=0.176
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3836246
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3836246.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3836246: CER=0.182, WER=0.318
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3852482
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3852482.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3852482: CER=0.085, WER=0.162
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3881193
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3881193.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3881193: CER=0.196, WER=0.309
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3900331
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3900331.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3900331: CER=0.167, WER=0.271
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3916744
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3916744.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3916744: CER=0.144, WER=0.251
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3966309
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3966309.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3966309: CER=0.095, WER=0.177
+[2026-06-19 13:35:19] [INFO] [asr_metrics] rec_id 3989817
+[2026-06-19 13:35:19] [INFO] [asr_metrics] gt_file data\Track_2_ASR_DevData_1\Hindi\GT\3989817.txt
+[2026-06-19 13:35:19] [INFO] [asr_metrics] 3989817: CER=0.081, WER=0.172
+[2026-06-19 13:35:19] [INFO] [asr_metrics] Saved metrics to outputs\metrics\asr_cer_wer_results.json
+[2026-06-19 13:35:19] [INFO] [asr_metrics] Average CER: 0.159, WER: 0.276
+[2026-06-19 13:35:19] [WARNING] [asr_metrics] meeteval is not installed. Skipping TCPWER calculation step entirely.

@@ -1,0 +1,7 @@
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] Starting ASR Pipeline
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] audio_folder data\Track_2_ASR_DevData_1\Hindi\Audio
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] rttm_folderC:\Users\Hp\DISPLACE-2026-Baselines\Track1_SD\gen_rttm
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] gt_folder data\Track_2_ASR_DevData_1\Hindi\GT
+[2026-06-19 12:25:33] [INFO] [asr_pipeline] Starting RTTM-based ASR transcription

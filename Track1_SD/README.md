@@ -1,145 +1,160 @@
-# Speaker Diarization Baseline
+<div align="center">
+  <h1>🎙️ Speaker Diarization Baseline</h1>
+  <h3>DISPLACE-2026 Challenge (Track 1)</h3>
+  <br/>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+  [![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
+</div>
 
-## About
-Inspired by the previous session of DISPLACE challenge, we have launched the third DISPLACE-M 
-challenge (https://displace2026.github.io/). The DISPLACE-M challenge provides a unique dataset 
-of medical conversations between Community health workers and local residents in two Indian 
-languages, Hindi and Kannada, collected in a wide geographic region covering different dialects. 
-The dataset presents unique challenges such as spontaneous dialogue, foreground speech overlap, 
-background speech, dialectal variation, and environmental noise in rural healthcare settings, 
-making it an unprecedented resource for advancing low-resource, multi-dialect conversational AI. 
+<hr/>
 
-For speaker diarization we use the [wavlm_base_s80_md](https://huggingface.co/BUT-FIT/diarizen-wavlm-base-s80-md) model from DiariZen developed by Brno University of Technology, Speech@FIT, Czechia team, detailed in the papers
+## 📖 About the Challenge
 
--  Han, Jiangyu, et al. "Leveraging self-supervised learning for speaker diarization." ICASSP 2025-2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2025. <https://ieeexplore.ieee.org/abstract/document/10889475>
--  Han, Jiangyu, et al. "Fine-tune before structured pruning: Towards compact and accurate self-supervised models for speaker diarization." arXiv preprint arXiv:2505.24111 (2025). <https://arxiv.org/pdf/2505.24111>
--  Han, Jiangyu, et al. "Efficient and Generalizable Speaker Diarization via Structured Pruning of Self-Supervised Models." arXiv preprint arXiv:2506.18623 (2025). <https://arxiv.org/pdf/2506.18623>
+Inspired by the previous session of the DISPLACE challenge, we have launched the third **DISPLACE-M challenge**. The DISPLACE-M challenge provides a unique dataset of medical conversations between Community health workers and local residents in two Indian languages, **Hindi** and **Kannada**, collected across a wide geographic region covering different dialects.
 
-available at the [GitHub repository](https://github.com/BUTSpeechFIT/DiariZen)
+**Why is it challenging?**
+- 🗣️ Spontaneous dialogue & foreground speech overlap
+- 🔊 Background speech & environmental noise
+- 🌍 Dialectal variations in rural healthcare settings
 
-## Track Information
+This dataset is an unprecedented resource for advancing low-resource, multi-dialect conversational AI. Learn more at the [Official Website](https://displace2026.github.io/).
 
-This repository is the official baseline for:
+---
 
-#### **Track 1 – Speaker Diarization (SD)**
+## 🎯 Track 1: Speaker Diarization (SD)
 
-**Task:**  
-Segment multilingual and code-mixed healthcare conversations across diverse dialects and noisy environments based on the speaker.
+**The Task:** Segment multilingual and code-mixed healthcare conversations across diverse dialects and noisy environments based on the speaker.
 
+For this baseline, we leverage the [`wavlm_base_s80_md`](https://huggingface.co/BUT-FIT/diarizen-wavlm-base-s80-md) model from **DiariZen**, developed by the Brno University of Technology, Speech@FIT, Czechia team. For more details on the architecture, refer to the following resources:
+- [DiariZen GitHub repository](https://github.com/BUTSpeechFIT/DiariZen)
+- Han, Jiangyu, et al. "Leveraging self-supervised learning for speaker diarization." ICASSP 2025. ([Link](https://ieeexplore.ieee.org/abstract/document/10889475))
+- Han, Jiangyu, et al. "Fine-tune before structured pruning." arXiv preprint (2025). ([Link](https://arxiv.org/pdf/2505.24111))
+- Han, Jiangyu, et al. "Efficient and Generalizable Speaker Diarization." arXiv preprint (2025). ([Link](https://arxiv.org/pdf/2506.18623))
 
-## Entire directory structure
+---
 
+## 📂 Directory Structure
+
+Here is an overview of how the repository is structured:
+
+```mermaid
+graph TD
+    A[Track1_SD] --> B(setup.sh)
+    A --> C(run.sh)
+    A --> D(config.toml)
+    A --> E[DiariZen/]
+    A --> F[data_directory/]
+    F --> G[data/]
+    G --> H[wav/]
+    G --> I[rttm/]
+    F -.-> J[score/ *]
+    F -.-> K[gen_rttm/ *]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style J stroke-dasharray: 5 5
+    style K stroke-dasharray: 5 5
 ```
-Track1_SD
-|
-└──setup.sh                               # To clone DirariZen, and install all dependencies
-|
-└──run.sh                                 # To specify paths and make inference using inference_withConfigFile.py and score the model output
-|
-└──config.toml                            # Configuration file for DiariZen
-|
-└──DiariZen/                              # Created after cloning DiariZen's GitHub repository
-|    └──inference_withConfigFile.py       # To make inference using DiariZen model
-|    |
-|    └──<other files from DiariZen repo>
-|
-└──data_directory/                        
-    |
-    └──data/                              # will contain the audio and ground truth directories
-    |   |
-    |   └──wav/                           # audio directory
-    |   |   └───<Record_ID>.wav
-    |   │   
-    |   └──rttm/                          # ground truth directory
-    |       └───<Record_ID>_SPEAKER.rttm 
-    |
-    └──score/                             # directory containing the final scores 
-    |
-    └──gen_rttm/                          # directory containing the per-file rttms generated by the model
 
-```
+> [!NOTE]
+> The `DiariZen/` folder will be downloaded when you run `setup.sh`. The `score/` and `gen_rttm/` folders inside `data_directory/` (indicated by dotted lines) will be generated automatically when running inference via `run.sh`.
 
-## Scoring
-The performance is evaluated using [Diaration error rate (DER)](https://github.com/nryant/dscore) as the primary metric.
+---
 
-DER = False Alarm speech + Missed Speech + Speaker Confusion error
+## 🚀 Setup & Execution
 
-- speaker error -- percentage of scored time for which the wrong speaker id is assigned within a speech region
-- false alarm speech -- percentage of scored time for which a nonspeech region is incorrectly marked as containing speech
-- missed speech -- percentage of scored time for which a speech region is incorrectly marked as not containing speech
+### 1. Clone the Repository
 
-These scores are extracted from the original ``dscore`` logs, which are output to ``data_directory/score`` directory
-
-## How to setup and run
-
-### Clone the Repository
-```
+```bash
 git clone https://github.com/displace2026/DISPLACE-2026-Baselines.git
 cd DISPLACE-2026-Baselines/Track1_SD
 ```
-    
-### Dataset Download
-Download `Track_1_SD_DevData_1` from the [Official Website](https://displace2026.github.io/) and place it in the `data_directory/` folder.
-> **Note:** Access may require registration, agreement to the Challenge Terms and Conditions.
 
-Create the `data_directory` folder, and copy the `data` folder from `Track_1_SD_DevData_1` to it as shown in the directory structure. Note that the `data_directory/score` and `data_directory/gen_rttm` will be created automatically. 
+### 2. Download the Dataset
 
-### Inference
+1. Download **`Track_1_SD_DevData_1`** from the [Official Website](https://displace2026.github.io/). *(Note: Access may require registration and agreement to Challenge Terms)*
+2. Create the `data_directory` folder in the project root if it doesn't exist.
+3. Copy the `data` folder from your downloaded `Track_1_SD_DevData_1` into `data_directory/`.
 
-Execute the following script comprising a slightly modified version of instructions provided in the GitHub repository of DiariZen. It will clone the DiariZen repository at the present working directory and setup the 'diarizen' environment.
+Your `data_directory` should now look like this:
+```
+data_directory/
+└── data/
+    ├── wav/
+    │   └── <Record_ID>.wav
+    └── rttm/
+        └── <Record_ID>_SPEAKER.rttm
+```
+
+### 3. Install Dependencies & Setup Environment
+
+Execute the setup script. This script automatically clones the DiariZen repository and sets up the required `diarizen` Conda environment.
+
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
-**NOTE:** While running `setup.sh` you may encounter the following error \
-$\color{red}\text{ERROR: Package 'diarizen' requires a different Python: 3.9.25 not in '>=3.10'}$ \
-Do not worry and continue since we will be using the files from the `diarizen` folder inside `DiariZen`.
 
-In the `run.sh` file, provide the path to the `data_directory` (i.e. `data_dir_path`) and the path to the `config.toml` file accordingly (No need to make any changes if using the setup from the README). \
-**NOTE:** If generating the ouput for the other tracks, update 
-- `data_dir_path` to point to the <Track>/data/<Data_file_for_Track> folder (Eg. '../Track2_ASR/data/Track_2_ASR_DevData_1')
-- `dir_containing_files='Hindi'`
-- `wav_dir='Audio'`
+> [!WARNING]
+> If you encounter the error: `ERROR: Package 'diarizen' requires a different Python: 3.9.25 not in '>=3.10'`, **do not worry!** You can safely ignore it, as we will use the files from the `diarizen` folder inside the newly created `DiariZen` directory.
 
-Run the following command to make inference
+### 4. Run Inference & Scoring
+
+If you are using the exact setup above, simply run:
+
 ```bash
 chmod +x run.sh
 ./run.sh
 ```
-The per-file diariztion results generated by DiariZen will be available at `data_directory/gen_rttm` directory, and scoring results will be available in `data_directory/score` directory.
-Any errors related to the inference will be available at `data_directory/inf_log.txt`, and scoring error will be available at `data_directory/score/final_score.err`.
 
-# Expected Output format 
-This is the expected output for the Hindi-DEV data. The final DER is the DER calculated combining all the files.
-This is with `data_dir_path='/home/ashwini/DISPLACE/DiarizenBaseline/Hindi_DEV'`. 
-```
+> [!TIP]
+> **Customizing for other tracks?**  
+> If generating output for other tracks, open `run.sh` and update:
+> - `data_dir_path` (e.g., `../Track2_ASR/data/Track_2_ASR_DevData_1`)
+> - `dir_containing_files='Hindi'`
+> - `wav_dir='Audio'`
+
+**Where are my results?**
+- 📄 **Diarization Output:** `data_directory/gen_rttm`
+- 📊 **Scoring Results:** `data_directory/score`
+- 🐛 **Logs/Errors:** `data_directory/inf_log.txt` (Inference) and `data_directory/score/final_score.err` (Scoring)
+
+---
+
+## 📈 Evaluation & Expected Output
+
+The performance is evaluated using **Diarization Error Rate (DER)** via [dscore](https://github.com/nryant/dscore):
+
+`DER = False Alarm speech + Missed Speech + Speaker Confusion error`
+
+When you successfully run the pipeline on the Hindi-DEV data, the expected console output will look similar to this:
+
+```text
 Overriding with parsed config.
-Loaded configuration: {'model': {'path': 'diarizen.models.eend.model_wavlm_conformer.Model', 'args': {'wavlm_src': 'wavlm_base_s80_md', 'wavlm_layer_num': 13, 'wavlm_feat_dim': 768, 'attention_in': 256, 'ffn_hidden': 1024, 'num_head': 4, 'num_layer': 4, 'dropout': 0.1, 'chunk_size': 16, 'use_posi': False, 'output_activate_function': False, 'selected_channel': 0}}, 'inference': {'args': {'seg_duration': 16, 'segmentation_step': 0.1, 'batch_size': 32, 'apply_median_filtering': True}}, 'clustering': {'args': {'method': 'AgglomerativeClustering', 'min_speakers': 2, 'max_speakers': 2, 'ahc_criterion': 'distance', 'ahc_threshold': 0.6, 'Fa': 0.07, 'Fb': 0.8, 'lda_dim': 128, 'max_iters': 20, 'min_cluster_size': 13}}}
-self.embedding: /home/ashwini/.cache/huggingface/hub/models--pyannote--wespeaker-voxceleb-resnet34-LM/snapshots/837717ddb9ff5507820346191109dc79c958d614/pytorch_model.bin
+Loaded configuration: {'model': {...}, 'inference': {...}, 'clustering': {...}}
+self.embedding: /home/.../pytorch_model.bin
 Extracting segmentations.
 Extracting Embeddings.
 Clustering.
-.
-.
-.
-Extracting segmentations.
-Extracting Embeddings.
-Clustering.
-Per-file diarization outputs are availabel in /home/ashwini/DISPLACE/DiarizenBaseline/Hindi_DEV/gen_rttm
-Please refer to data_directory/inf_log.txt for errors
+...
+Per-file diarization outputs are available in data_directory/gen_rttm
+Please refer to inf_log.txt for errors
 SCORING ....
 ************************************************
 
-              OVERALL DER = 10.54                
+              OVERALL DER = 10.15                
 
 ************************************************
-Error and results file present at /home/ashwini/DISPLACE/DiarizenBaseline/Hindi_DEV/score
+Error and results file present at data_directory/score
 ```
 
-NOTE: The following message appears for each file evalulated 
-```
-Extracting segmentations.
-Extracting Embeddings.
-Clustering.
-```
+> [!NOTE]
+> For every file processed, the script will output the sequence: `Extracting segmentations.`, `Extracting Embeddings.`, `Clustering.`.
 
+---
+<div align="center">
+  <i>Developed and maintained by the DISPLACE-2026 Challenge Team.</i>
+</div>

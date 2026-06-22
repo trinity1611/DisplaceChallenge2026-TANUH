@@ -1,0 +1,9 @@
+TP: 57
+FP: 37
+FN: 49
+Precision: 0.606
+Recall: 0.538
+F1: 0.57
+Accuracy: 0.629
+Overall_BERTScore: 0.62
+ROUGE-1: 0.243

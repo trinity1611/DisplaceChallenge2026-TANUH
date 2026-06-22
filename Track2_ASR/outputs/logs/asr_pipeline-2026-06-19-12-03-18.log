@@ -1,0 +1,11 @@
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] Starting ASR Pipeline
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] ================================================================================
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] audio_folder data\Track_2_ASR_DevData_1\Hindi\Audio
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] rttm_folder..\Track1_SD\data_directory\gen_rttm
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] gt_folder data\Track_2_ASR_DevData_1\Hindi\GT
+[2026-06-19 12:03:18] [INFO] [asr_pipeline] Starting RTTM-based ASR transcription
+[2026-06-19 12:07:17] [INFO] [asr_pipeline] Transcription completed successfully
+[2026-06-19 12:07:17] [INFO] [asr_pipeline] Calculating WER / CER
+[2026-06-19 12:07:17] [INFO] [asr_pipeline] ASR Metrics | Records Processed: 0 Average CER: 0.000 Average WER: 0.000
+[2026-06-19 12:07:17] [INFO] [asr_pipeline] Calculating tcpWER

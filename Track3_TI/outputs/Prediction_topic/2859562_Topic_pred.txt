@@ -1,0 +1,1 @@
+hands,feet,stomach,pain,injury,medication

@@ -1,0 +1,237 @@
+[2026-06-19 12:37:44] [INFO] [asr_transcribe_segments] Loading ASR model from: ai4bharat/indic-conformer-600m-multilingual on device cuda
+[2026-06-19 12:37:57] [INFO] [asr_transcribe_segments] ASR Model loaded successfully.
+[2026-06-19 12:37:57] [INFO] [asr_transcribe_segments] Found 78 audio records for transcription
+[2026-06-19 12:37:57] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2006763.wav
+[2026-06-19 12:37:59] [INFO] [asr_transcribe_segments] Processing record 2006763 with 194 segments
+[2026-06-19 12:38:42] [INFO] [asr_transcribe_segments] Saved full transcript for 2006763 at outputs\ASR\fa_asr_predictions\2006763_fullaudio_transcription.txt
+[2026-06-19 12:38:42] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2011315.wav
+[2026-06-19 12:38:42] [INFO] [asr_transcribe_segments] Processing record 2011315 with 317 segments
+[2026-06-19 12:39:38] [INFO] [asr_transcribe_segments] Saved full transcript for 2011315 at outputs\ASR\fa_asr_predictions\2011315_fullaudio_transcription.txt
+[2026-06-19 12:39:38] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2024698.wav
+[2026-06-19 12:39:38] [INFO] [asr_transcribe_segments] Processing record 2024698 with 268 segments
+[2026-06-19 12:40:21] [INFO] [asr_transcribe_segments] Saved full transcript for 2024698 at outputs\ASR\fa_asr_predictions\2024698_fullaudio_transcription.txt
+[2026-06-19 12:40:21] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2025454.wav
+[2026-06-19 12:40:21] [INFO] [asr_transcribe_segments] Processing record 2025454 with 464 segments
+[2026-06-19 12:41:45] [INFO] [asr_transcribe_segments] Saved full transcript for 2025454 at outputs\ASR\fa_asr_predictions\2025454_fullaudio_transcription.txt
+[2026-06-19 12:41:45] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2051619.wav
+[2026-06-19 12:41:45] [INFO] [asr_transcribe_segments] Processing record 2051619 with 142 segments
+[2026-06-19 12:42:08] [INFO] [asr_transcribe_segments] Saved full transcript for 2051619 at outputs\ASR\fa_asr_predictions\2051619_fullaudio_transcription.txt
+[2026-06-19 12:42:08] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2104727.wav
+[2026-06-19 12:42:08] [INFO] [asr_transcribe_segments] Processing record 2104727 with 256 segments
+[2026-06-19 12:43:05] [INFO] [asr_transcribe_segments] Saved full transcript for 2104727 at outputs\ASR\fa_asr_predictions\2104727_fullaudio_transcription.txt
+[2026-06-19 12:43:05] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2157582.wav
+[2026-06-19 12:43:05] [INFO] [asr_transcribe_segments] Processing record 2157582 with 444 segments
+[2026-06-19 12:44:07] [INFO] [asr_transcribe_segments] Saved full transcript for 2157582 at outputs\ASR\fa_asr_predictions\2157582_fullaudio_transcription.txt
+[2026-06-19 12:44:07] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2190472.wav
+[2026-06-19 12:44:07] [INFO] [asr_transcribe_segments] Processing record 2190472 with 315 segments
+[2026-06-19 12:44:53] [INFO] [asr_transcribe_segments] Saved full transcript for 2190472 at outputs\ASR\fa_asr_predictions\2190472_fullaudio_transcription.txt
+[2026-06-19 12:44:53] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2215699.wav
+[2026-06-19 12:44:53] [INFO] [asr_transcribe_segments] Processing record 2215699 with 473 segments
+[2026-06-19 12:46:10] [INFO] [asr_transcribe_segments] Saved full transcript for 2215699 at outputs\ASR\fa_asr_predictions\2215699_fullaudio_transcription.txt
+[2026-06-19 12:46:10] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2234940.wav
+[2026-06-19 12:46:10] [INFO] [asr_transcribe_segments] Processing record 2234940 with 265 segments
+[2026-06-19 12:46:49] [INFO] [asr_transcribe_segments] Saved full transcript for 2234940 at outputs\ASR\fa_asr_predictions\2234940_fullaudio_transcription.txt
+[2026-06-19 12:46:49] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2246689.wav
+[2026-06-19 12:46:49] [INFO] [asr_transcribe_segments] Processing record 2246689 with 210 segments
+[2026-06-19 12:47:24] [INFO] [asr_transcribe_segments] Saved full transcript for 2246689 at outputs\ASR\fa_asr_predictions\2246689_fullaudio_transcription.txt
+[2026-06-19 12:47:24] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2289810.wav
+[2026-06-19 12:47:24] [INFO] [asr_transcribe_segments] Processing record 2289810 with 253 segments
+[2026-06-19 12:48:05] [INFO] [asr_transcribe_segments] Saved full transcript for 2289810 at outputs\ASR\fa_asr_predictions\2289810_fullaudio_transcription.txt
+[2026-06-19 12:48:05] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2302262.wav
+[2026-06-19 12:48:05] [INFO] [asr_transcribe_segments] Processing record 2302262 with 527 segments
+[2026-06-19 12:49:57] [INFO] [asr_transcribe_segments] Saved full transcript for 2302262 at outputs\ASR\fa_asr_predictions\2302262_fullaudio_transcription.txt
+[2026-06-19 12:49:57] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2316003.wav
+[2026-06-19 12:49:57] [INFO] [asr_transcribe_segments] Processing record 2316003 with 187 segments
+[2026-06-19 12:50:32] [INFO] [asr_transcribe_segments] Saved full transcript for 2316003 at outputs\ASR\fa_asr_predictions\2316003_fullaudio_transcription.txt
+[2026-06-19 12:50:32] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2324000.wav
+[2026-06-19 12:50:32] [INFO] [asr_transcribe_segments] Processing record 2324000 with 312 segments
+[2026-06-19 12:51:11] [INFO] [asr_transcribe_segments] Saved full transcript for 2324000 at outputs\ASR\fa_asr_predictions\2324000_fullaudio_transcription.txt
+[2026-06-19 12:51:11] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2392867.wav
+[2026-06-19 12:51:11] [INFO] [asr_transcribe_segments] Processing record 2392867 with 384 segments
+[2026-06-19 12:52:03] [INFO] [asr_transcribe_segments] Saved full transcript for 2392867 at outputs\ASR\fa_asr_predictions\2392867_fullaudio_transcription.txt
+[2026-06-19 12:52:03] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2404173.wav
+[2026-06-19 12:52:03] [INFO] [asr_transcribe_segments] Processing record 2404173 with 229 segments
+[2026-06-19 12:52:43] [INFO] [asr_transcribe_segments] Saved full transcript for 2404173 at outputs\ASR\fa_asr_predictions\2404173_fullaudio_transcription.txt
+[2026-06-19 12:52:43] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2408885.wav
+[2026-06-19 12:52:43] [INFO] [asr_transcribe_segments] Processing record 2408885 with 179 segments
+[2026-06-19 12:53:39] [INFO] [asr_transcribe_segments] Saved full transcript for 2408885 at outputs\ASR\fa_asr_predictions\2408885_fullaudio_transcription.txt
+[2026-06-19 12:53:39] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2416907.wav
+[2026-06-19 12:53:39] [INFO] [asr_transcribe_segments] Processing record 2416907 with 424 segments
+[2026-06-19 12:55:30] [INFO] [asr_transcribe_segments] Saved full transcript for 2416907 at outputs\ASR\fa_asr_predictions\2416907_fullaudio_transcription.txt
+[2026-06-19 12:55:30] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2448528.wav
+[2026-06-19 12:55:30] [INFO] [asr_transcribe_segments] Processing record 2448528 with 436 segments
+[2026-06-19 12:57:20] [INFO] [asr_transcribe_segments] Saved full transcript for 2448528 at outputs\ASR\fa_asr_predictions\2448528_fullaudio_transcription.txt
+[2026-06-19 12:57:20] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2472267.wav
+[2026-06-19 12:57:20] [INFO] [asr_transcribe_segments] Processing record 2472267 with 219 segments
+[2026-06-19 12:58:16] [INFO] [asr_transcribe_segments] Saved full transcript for 2472267 at outputs\ASR\fa_asr_predictions\2472267_fullaudio_transcription.txt
+[2026-06-19 12:58:16] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2492647.wav
+[2026-06-19 12:58:16] [INFO] [asr_transcribe_segments] Processing record 2492647 with 190 segments
+[2026-06-19 12:59:09] [INFO] [asr_transcribe_segments] Saved full transcript for 2492647 at outputs\ASR\fa_asr_predictions\2492647_fullaudio_transcription.txt
+[2026-06-19 12:59:09] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2507155.wav
+[2026-06-19 12:59:10] [INFO] [asr_transcribe_segments] Processing record 2507155 with 227 segments
+[2026-06-19 13:00:07] [INFO] [asr_transcribe_segments] Saved full transcript for 2507155 at outputs\ASR\fa_asr_predictions\2507155_fullaudio_transcription.txt
+[2026-06-19 13:00:07] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2508371.wav
+[2026-06-19 13:00:07] [INFO] [asr_transcribe_segments] Processing record 2508371 with 292 segments
+[2026-06-19 13:01:15] [INFO] [asr_transcribe_segments] Saved full transcript for 2508371 at outputs\ASR\fa_asr_predictions\2508371_fullaudio_transcription.txt
+[2026-06-19 13:01:15] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2532454.wav
+[2026-06-19 13:01:15] [INFO] [asr_transcribe_segments] Processing record 2532454 with 331 segments
+[2026-06-19 13:02:00] [INFO] [asr_transcribe_segments] Saved full transcript for 2532454 at outputs\ASR\fa_asr_predictions\2532454_fullaudio_transcription.txt
+[2026-06-19 13:02:00] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2577003.wav
+[2026-06-19 13:02:00] [INFO] [asr_transcribe_segments] Processing record 2577003 with 219 segments
+[2026-06-19 13:02:33] [INFO] [asr_transcribe_segments] Saved full transcript for 2577003 at outputs\ASR\fa_asr_predictions\2577003_fullaudio_transcription.txt
+[2026-06-19 13:02:33] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2627977.wav
+[2026-06-19 13:02:33] [INFO] [asr_transcribe_segments] Processing record 2627977 with 280 segments
+[2026-06-19 13:03:11] [INFO] [asr_transcribe_segments] Saved full transcript for 2627977 at outputs\ASR\fa_asr_predictions\2627977_fullaudio_transcription.txt
+[2026-06-19 13:03:11] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2643195.wav
+[2026-06-19 13:03:11] [INFO] [asr_transcribe_segments] Processing record 2643195 with 146 segments
+[2026-06-19 13:03:35] [INFO] [asr_transcribe_segments] Saved full transcript for 2643195 at outputs\ASR\fa_asr_predictions\2643195_fullaudio_transcription.txt
+[2026-06-19 13:03:35] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2669941.wav
+[2026-06-19 13:03:35] [INFO] [asr_transcribe_segments] Processing record 2669941 with 277 segments
+[2026-06-19 13:04:11] [INFO] [asr_transcribe_segments] Saved full transcript for 2669941 at outputs\ASR\fa_asr_predictions\2669941_fullaudio_transcription.txt
+[2026-06-19 13:04:11] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2690429.wav
+[2026-06-19 13:04:11] [INFO] [asr_transcribe_segments] Processing record 2690429 with 386 segments
+[2026-06-19 13:05:43] [INFO] [asr_transcribe_segments] Saved full transcript for 2690429 at outputs\ASR\fa_asr_predictions\2690429_fullaudio_transcription.txt
+[2026-06-19 13:05:43] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2704391.wav
+[2026-06-19 13:05:43] [INFO] [asr_transcribe_segments] Processing record 2704391 with 329 segments
+[2026-06-19 13:06:27] [INFO] [asr_transcribe_segments] Saved full transcript for 2704391 at outputs\ASR\fa_asr_predictions\2704391_fullaudio_transcription.txt
+[2026-06-19 13:06:27] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2712340.wav
+[2026-06-19 13:06:27] [INFO] [asr_transcribe_segments] Processing record 2712340 with 254 segments
+[2026-06-19 13:07:03] [INFO] [asr_transcribe_segments] Saved full transcript for 2712340 at outputs\ASR\fa_asr_predictions\2712340_fullaudio_transcription.txt
+[2026-06-19 13:07:03] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2720729.wav
+[2026-06-19 13:07:03] [INFO] [asr_transcribe_segments] Processing record 2720729 with 358 segments
+[2026-06-19 13:07:47] [INFO] [asr_transcribe_segments] Saved full transcript for 2720729 at outputs\ASR\fa_asr_predictions\2720729_fullaudio_transcription.txt
+[2026-06-19 13:07:47] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2751425.wav
+[2026-06-19 13:07:47] [INFO] [asr_transcribe_segments] Processing record 2751425 with 224 segments
+[2026-06-19 13:08:21] [INFO] [asr_transcribe_segments] Saved full transcript for 2751425 at outputs\ASR\fa_asr_predictions\2751425_fullaudio_transcription.txt
+[2026-06-19 13:08:21] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2853413.wav
+[2026-06-19 13:08:21] [INFO] [asr_transcribe_segments] Processing record 2853413 with 120 segments
+[2026-06-19 13:08:37] [INFO] [asr_transcribe_segments] Saved full transcript for 2853413 at outputs\ASR\fa_asr_predictions\2853413_fullaudio_transcription.txt
+[2026-06-19 13:08:37] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2859562.wav
+[2026-06-19 13:08:37] [INFO] [asr_transcribe_segments] Processing record 2859562 with 478 segments
+[2026-06-19 13:09:40] [INFO] [asr_transcribe_segments] Saved full transcript for 2859562 at outputs\ASR\fa_asr_predictions\2859562_fullaudio_transcription.txt
+[2026-06-19 13:09:40] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2907609.wav
+[2026-06-19 13:09:40] [INFO] [asr_transcribe_segments] Processing record 2907609 with 261 segments
+[2026-06-19 13:10:16] [INFO] [asr_transcribe_segments] Saved full transcript for 2907609 at outputs\ASR\fa_asr_predictions\2907609_fullaudio_transcription.txt
+[2026-06-19 13:10:16] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2943043.wav
+[2026-06-19 13:10:16] [INFO] [asr_transcribe_segments] Processing record 2943043 with 296 segments
+[2026-06-19 13:10:54] [INFO] [asr_transcribe_segments] Saved full transcript for 2943043 at outputs\ASR\fa_asr_predictions\2943043_fullaudio_transcription.txt
+[2026-06-19 13:10:54] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2974366.wav
+[2026-06-19 13:10:54] [INFO] [asr_transcribe_segments] Processing record 2974366 with 334 segments
+[2026-06-19 13:11:34] [INFO] [asr_transcribe_segments] Saved full transcript for 2974366 at outputs\ASR\fa_asr_predictions\2974366_fullaudio_transcription.txt
+[2026-06-19 13:11:34] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3002815.wav
+[2026-06-19 13:11:34] [INFO] [asr_transcribe_segments] Processing record 3002815 with 248 segments
+[2026-06-19 13:12:08] [INFO] [asr_transcribe_segments] Saved full transcript for 3002815 at outputs\ASR\fa_asr_predictions\3002815_fullaudio_transcription.txt
+[2026-06-19 13:12:08] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3017365.wav
+[2026-06-19 13:12:08] [INFO] [asr_transcribe_segments] Processing record 3017365 with 282 segments
+[2026-06-19 13:12:43] [INFO] [asr_transcribe_segments] Saved full transcript for 3017365 at outputs\ASR\fa_asr_predictions\3017365_fullaudio_transcription.txt
+[2026-06-19 13:12:43] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3116006.wav
+[2026-06-19 13:12:43] [INFO] [asr_transcribe_segments] Processing record 3116006 with 363 segments
+[2026-06-19 13:13:25] [INFO] [asr_transcribe_segments] Saved full transcript for 3116006 at outputs\ASR\fa_asr_predictions\3116006_fullaudio_transcription.txt
+[2026-06-19 13:13:25] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3132933.wav
+[2026-06-19 13:13:25] [INFO] [asr_transcribe_segments] Processing record 3132933 with 300 segments
+[2026-06-19 13:14:07] [INFO] [asr_transcribe_segments] Saved full transcript for 3132933 at outputs\ASR\fa_asr_predictions\3132933_fullaudio_transcription.txt
+[2026-06-19 13:14:07] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3143841.wav
+[2026-06-19 13:14:07] [INFO] [asr_transcribe_segments] Processing record 3143841 with 379 segments
+[2026-06-19 13:14:50] [INFO] [asr_transcribe_segments] Saved full transcript for 3143841 at outputs\ASR\fa_asr_predictions\3143841_fullaudio_transcription.txt
+[2026-06-19 13:14:50] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3150359.wav
+[2026-06-19 13:14:50] [INFO] [asr_transcribe_segments] Processing record 3150359 with 202 segments
+[2026-06-19 13:15:20] [INFO] [asr_transcribe_segments] Saved full transcript for 3150359 at outputs\ASR\fa_asr_predictions\3150359_fullaudio_transcription.txt
+[2026-06-19 13:15:20] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3162464.wav
+[2026-06-19 13:15:20] [INFO] [asr_transcribe_segments] Processing record 3162464 with 243 segments
+[2026-06-19 13:15:54] [INFO] [asr_transcribe_segments] Saved full transcript for 3162464 at outputs\ASR\fa_asr_predictions\3162464_fullaudio_transcription.txt
+[2026-06-19 13:15:54] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3186725.wav
+[2026-06-19 13:15:54] [INFO] [asr_transcribe_segments] Processing record 3186725 with 289 segments
+[2026-06-19 13:16:30] [INFO] [asr_transcribe_segments] Saved full transcript for 3186725 at outputs\ASR\fa_asr_predictions\3186725_fullaudio_transcription.txt
+[2026-06-19 13:16:30] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3228806.wav
+[2026-06-19 13:16:30] [INFO] [asr_transcribe_segments] Processing record 3228806 with 227 segments
+[2026-06-19 13:17:06] [INFO] [asr_transcribe_segments] Saved full transcript for 3228806 at outputs\ASR\fa_asr_predictions\3228806_fullaudio_transcription.txt
+[2026-06-19 13:17:06] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3229783.wav
+[2026-06-19 13:17:06] [INFO] [asr_transcribe_segments] Processing record 3229783 with 314 segments
+[2026-06-19 13:17:43] [INFO] [asr_transcribe_segments] Saved full transcript for 3229783 at outputs\ASR\fa_asr_predictions\3229783_fullaudio_transcription.txt
+[2026-06-19 13:17:43] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3242986.wav
+[2026-06-19 13:17:43] [INFO] [asr_transcribe_segments] Processing record 3242986 with 269 segments
+[2026-06-19 13:18:19] [INFO] [asr_transcribe_segments] Saved full transcript for 3242986 at outputs\ASR\fa_asr_predictions\3242986_fullaudio_transcription.txt
+[2026-06-19 13:18:19] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3303284.wav
+[2026-06-19 13:18:19] [INFO] [asr_transcribe_segments] Processing record 3303284 with 223 segments
+[2026-06-19 13:18:51] [INFO] [asr_transcribe_segments] Saved full transcript for 3303284 at outputs\ASR\fa_asr_predictions\3303284_fullaudio_transcription.txt
+[2026-06-19 13:18:51] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3334594.wav
+[2026-06-19 13:18:51] [INFO] [asr_transcribe_segments] Processing record 3334594 with 339 segments
+[2026-06-19 13:19:35] [INFO] [asr_transcribe_segments] Saved full transcript for 3334594 at outputs\ASR\fa_asr_predictions\3334594_fullaudio_transcription.txt
+[2026-06-19 13:19:35] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3340696.wav
+[2026-06-19 13:19:35] [INFO] [asr_transcribe_segments] Processing record 3340696 with 225 segments
+[2026-06-19 13:20:06] [INFO] [asr_transcribe_segments] Saved full transcript for 3340696 at outputs\ASR\fa_asr_predictions\3340696_fullaudio_transcription.txt
+[2026-06-19 13:20:06] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3385730.wav
+[2026-06-19 13:20:06] [INFO] [asr_transcribe_segments] Processing record 3385730 with 282 segments
+[2026-06-19 13:20:41] [INFO] [asr_transcribe_segments] Saved full transcript for 3385730 at outputs\ASR\fa_asr_predictions\3385730_fullaudio_transcription.txt
+[2026-06-19 13:20:41] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3396231.wav
+[2026-06-19 13:20:41] [INFO] [asr_transcribe_segments] Processing record 3396231 with 228 segments
+[2026-06-19 13:21:11] [INFO] [asr_transcribe_segments] Saved full transcript for 3396231 at outputs\ASR\fa_asr_predictions\3396231_fullaudio_transcription.txt
+[2026-06-19 13:21:11] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3399073.wav
+[2026-06-19 13:21:11] [INFO] [asr_transcribe_segments] Processing record 3399073 with 251 segments
+[2026-06-19 13:21:46] [INFO] [asr_transcribe_segments] Saved full transcript for 3399073 at outputs\ASR\fa_asr_predictions\3399073_fullaudio_transcription.txt
+[2026-06-19 13:21:46] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3413937.wav
+[2026-06-19 13:21:46] [INFO] [asr_transcribe_segments] Processing record 3413937 with 243 segments
+[2026-06-19 13:22:21] [INFO] [asr_transcribe_segments] Saved full transcript for 3413937 at outputs\ASR\fa_asr_predictions\3413937_fullaudio_transcription.txt
+[2026-06-19 13:22:21] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3433042.wav
+[2026-06-19 13:22:21] [INFO] [asr_transcribe_segments] Processing record 3433042 with 288 segments
+[2026-06-19 13:22:59] [INFO] [asr_transcribe_segments] Saved full transcript for 3433042 at outputs\ASR\fa_asr_predictions\3433042_fullaudio_transcription.txt
+[2026-06-19 13:22:59] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3447838.wav
+[2026-06-19 13:22:59] [INFO] [asr_transcribe_segments] Processing record 3447838 with 442 segments
+[2026-06-19 13:23:59] [INFO] [asr_transcribe_segments] Saved full transcript for 3447838 at outputs\ASR\fa_asr_predictions\3447838_fullaudio_transcription.txt
+[2026-06-19 13:23:59] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3499432.wav
+[2026-06-19 13:23:59] [INFO] [asr_transcribe_segments] Processing record 3499432 with 368 segments
+[2026-06-19 13:24:48] [INFO] [asr_transcribe_segments] Saved full transcript for 3499432 at outputs\ASR\fa_asr_predictions\3499432_fullaudio_transcription.txt
+[2026-06-19 13:24:48] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3519376.wav
+[2026-06-19 13:24:48] [INFO] [asr_transcribe_segments] Processing record 3519376 with 299 segments
+[2026-06-19 13:25:23] [INFO] [asr_transcribe_segments] Saved full transcript for 3519376 at outputs\ASR\fa_asr_predictions\3519376_fullaudio_transcription.txt
+[2026-06-19 13:25:23] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3563865.wav
+[2026-06-19 13:25:23] [INFO] [asr_transcribe_segments] Processing record 3563865 with 164 segments
+[2026-06-19 13:25:48] [INFO] [asr_transcribe_segments] Saved full transcript for 3563865 at outputs\ASR\fa_asr_predictions\3563865_fullaudio_transcription.txt
+[2026-06-19 13:25:48] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3618325.wav
+[2026-06-19 13:25:48] [INFO] [asr_transcribe_segments] Processing record 3618325 with 335 segments
+[2026-06-19 13:26:29] [INFO] [asr_transcribe_segments] Saved full transcript for 3618325 at outputs\ASR\fa_asr_predictions\3618325_fullaudio_transcription.txt
+[2026-06-19 13:26:29] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3660167.wav
+[2026-06-19 13:26:29] [INFO] [asr_transcribe_segments] Processing record 3660167 with 240 segments
+[2026-06-19 13:27:02] [INFO] [asr_transcribe_segments] Saved full transcript for 3660167 at outputs\ASR\fa_asr_predictions\3660167_fullaudio_transcription.txt
+[2026-06-19 13:27:02] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3683686.wav
+[2026-06-19 13:27:02] [INFO] [asr_transcribe_segments] Processing record 3683686 with 437 segments
+[2026-06-19 13:28:01] [INFO] [asr_transcribe_segments] Saved full transcript for 3683686 at outputs\ASR\fa_asr_predictions\3683686_fullaudio_transcription.txt
+[2026-06-19 13:28:01] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3704252.wav
+[2026-06-19 13:28:01] [INFO] [asr_transcribe_segments] Processing record 3704252 with 248 segments
+[2026-06-19 13:28:33] [INFO] [asr_transcribe_segments] Saved full transcript for 3704252 at outputs\ASR\fa_asr_predictions\3704252_fullaudio_transcription.txt
+[2026-06-19 13:28:33] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3729840.wav
+[2026-06-19 13:28:33] [INFO] [asr_transcribe_segments] Processing record 3729840 with 142 segments
+[2026-06-19 13:28:50] [INFO] [asr_transcribe_segments] Saved full transcript for 3729840 at outputs\ASR\fa_asr_predictions\3729840_fullaudio_transcription.txt
+[2026-06-19 13:28:50] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3785595.wav
+[2026-06-19 13:28:50] [INFO] [asr_transcribe_segments] Processing record 3785595 with 298 segments
+[2026-06-19 13:29:29] [INFO] [asr_transcribe_segments] Saved full transcript for 3785595 at outputs\ASR\fa_asr_predictions\3785595_fullaudio_transcription.txt
+[2026-06-19 13:29:29] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3801058.wav
+[2026-06-19 13:29:29] [INFO] [asr_transcribe_segments] Processing record 3801058 with 253 segments
+[2026-06-19 13:30:05] [INFO] [asr_transcribe_segments] Saved full transcript for 3801058 at outputs\ASR\fa_asr_predictions\3801058_fullaudio_transcription.txt
+[2026-06-19 13:30:05] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3819695.wav
+[2026-06-19 13:30:05] [INFO] [asr_transcribe_segments] Processing record 3819695 with 301 segments
+[2026-06-19 13:30:43] [INFO] [asr_transcribe_segments] Saved full transcript for 3819695 at outputs\ASR\fa_asr_predictions\3819695_fullaudio_transcription.txt
+[2026-06-19 13:30:43] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3827529.wav
+[2026-06-19 13:30:43] [INFO] [asr_transcribe_segments] Processing record 3827529 with 306 segments
+[2026-06-19 13:31:27] [INFO] [asr_transcribe_segments] Saved full transcript for 3827529 at outputs\ASR\fa_asr_predictions\3827529_fullaudio_transcription.txt
+[2026-06-19 13:31:27] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3836246.wav
+[2026-06-19 13:31:27] [INFO] [asr_transcribe_segments] Processing record 3836246 with 272 segments
+[2026-06-19 13:32:04] [INFO] [asr_transcribe_segments] Saved full transcript for 3836246 at outputs\ASR\fa_asr_predictions\3836246_fullaudio_transcription.txt
+[2026-06-19 13:32:04] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3852482.wav
+[2026-06-19 13:32:04] [INFO] [asr_transcribe_segments] Processing record 3852482 with 261 segments
+[2026-06-19 13:32:36] [INFO] [asr_transcribe_segments] Saved full transcript for 3852482 at outputs\ASR\fa_asr_predictions\3852482_fullaudio_transcription.txt
+[2026-06-19 13:32:36] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3881193.wav
+[2026-06-19 13:32:36] [INFO] [asr_transcribe_segments] Processing record 3881193 with 270 segments
+[2026-06-19 13:33:13] [INFO] [asr_transcribe_segments] Saved full transcript for 3881193 at outputs\ASR\fa_asr_predictions\3881193_fullaudio_transcription.txt
+[2026-06-19 13:33:13] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3900331.wav
+[2026-06-19 13:33:13] [INFO] [asr_transcribe_segments] Processing record 3900331 with 282 segments
+[2026-06-19 13:33:50] [INFO] [asr_transcribe_segments] Saved full transcript for 3900331 at outputs\ASR\fa_asr_predictions\3900331_fullaudio_transcription.txt
+[2026-06-19 13:33:50] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3916744.wav
+[2026-06-19 13:33:50] [INFO] [asr_transcribe_segments] Processing record 3916744 with 199 segments
+[2026-06-19 13:34:17] [INFO] [asr_transcribe_segments] Saved full transcript for 3916744 at outputs\ASR\fa_asr_predictions\3916744_fullaudio_transcription.txt
+[2026-06-19 13:34:17] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3966309.wav
+[2026-06-19 13:34:17] [INFO] [asr_transcribe_segments] Processing record 3966309 with 228 segments
+[2026-06-19 13:34:48] [INFO] [asr_transcribe_segments] Saved full transcript for 3966309 at outputs\ASR\fa_asr_predictions\3966309_fullaudio_transcription.txt
+[2026-06-19 13:34:48] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\3989817.wav
+[2026-06-19 13:34:48] [INFO] [asr_transcribe_segments] Processing record 3989817 with 191 segments
+[2026-06-19 13:35:18] [INFO] [asr_transcribe_segments] Saved full transcript for 3989817 at outputs\ASR\fa_asr_predictions\3989817_fullaudio_transcription.txt

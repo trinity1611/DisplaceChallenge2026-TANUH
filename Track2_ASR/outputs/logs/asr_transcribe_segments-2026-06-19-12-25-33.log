@@ -1,0 +1,14 @@
+[2026-06-19 12:25:35] [INFO] [asr_transcribe_segments] Loading ASR model from: ai4bharat/indic-conformer-600m-multilingual on device cuda
+[2026-06-19 12:25:43] [INFO] [asr_transcribe_segments] ASR Model loaded successfully.
+[2026-06-19 12:25:43] [INFO] [asr_transcribe_segments] Found 78 audio records for transcription
+[2026-06-19 12:25:43] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2006763.wav
+[2026-06-19 12:25:43] [INFO] [asr_transcribe_segments] Processing record 2006763 with 194 segments
+[2026-06-19 12:27:10] [INFO] [asr_transcribe_segments] Saved full transcript for 2006763 at outputs\ASR\fa_asr_predictions\2006763_fullaudio_transcription.txt
+[2026-06-19 12:27:10] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2011315.wav
+[2026-06-19 12:27:10] [INFO] [asr_transcribe_segments] Processing record 2011315 with 317 segments
+[2026-06-19 12:28:42] [INFO] [asr_transcribe_segments] Saved full transcript for 2011315 at outputs\ASR\fa_asr_predictions\2011315_fullaudio_transcription.txt
+[2026-06-19 12:28:42] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2024698.wav
+[2026-06-19 12:28:42] [INFO] [asr_transcribe_segments] Processing record 2024698 with 268 segments
+[2026-06-19 12:29:27] [INFO] [asr_transcribe_segments] Saved full transcript for 2024698 at outputs\ASR\fa_asr_predictions\2024698_fullaudio_transcription.txt
+[2026-06-19 12:29:27] [INFO] [asr_transcribe_segments] wav_file data\Track_2_ASR_DevData_1\Hindi\Audio\2025454.wav
+[2026-06-19 12:29:27] [INFO] [asr_transcribe_segments] Processing record 2025454 with 464 segments

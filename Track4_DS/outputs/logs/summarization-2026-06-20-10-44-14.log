@@ -1,0 +1,64 @@
+[2026-06-20 10:44:14] [INFO] [summarization] ================================================================================
+[2026-06-20 10:44:14] [INFO] [summarization] Starting Summarization Pipeline
+[2026-06-20 10:44:14] [INFO] [summarization] ================================================================================
+[2026-06-20 10:44:14] [INFO] [summarization] Using CSV file: ./data/Track_4_DS_DevData_1/Hindi/GT/gt_data_summarization.csv
+[2026-06-20 10:44:14] [INFO] [summarization] Loaded configuration file
+[2026-06-20 10:44:14] [INFO] [summarization] Loading CSV file: ./data/Track_4_DS_DevData_1/Hindi/GT/gt_data_summarization.csv
+[2026-06-20 10:44:14] [INFO] [summarization] Loaded 25 records from CSV
+[2026-06-20 10:44:14] [INFO] [summarization] Successfully loaded 25 records. Skipped 0 records.
+[2026-06-20 10:44:14] [INFO] [summarization] Extracted 25 records from CSV with ASR files
+[2026-06-20 10:44:14] [INFO] [summarization] Loading summarizer with model: meta-llama/Llama-3.2-3B-Instruct
+[2026-06-20 10:44:25] [INFO] [summarizer] Loading summarization model: meta-llama/Llama-3.2-3B-Instruct
+[2026-06-20 10:44:36] [INFO] [summarizer] Model loaded successfully
+[2026-06-20 10:44:36] [INFO] [summarization] Initialized summarization model: meta-llama/Llama-3.2-3B-Instruct
+[2026-06-20 10:44:36] [INFO] [summarization] Processing summarization batch
+[2026-06-20 10:44:36] [INFO] [summarization] Summarizing 3989817
+[2026-06-20 11:00:37] [INFO] [summarization] Summarization completed for 3989817
+[2026-06-20 11:00:37] [INFO] [summarization] Summarizing 2507155
+[2026-06-20 11:11:52] [INFO] [summarization] Summarization completed for 2507155
+[2026-06-20 11:11:52] [INFO] [summarization] Summarizing 3519376
+[2026-06-20 11:25:17] [INFO] [summarization] Summarization completed for 3519376
+[2026-06-20 11:25:17] [INFO] [summarization] Summarizing 2907609
+[2026-06-20 11:44:33] [INFO] [summarization] Summarization completed for 2907609
+[2026-06-20 11:44:33] [INFO] [summarization] Summarizing 2669941
+[2026-06-20 11:58:57] [INFO] [summarization] Summarization completed for 2669941
+[2026-06-20 11:58:57] [INFO] [summarization] Summarizing 2472267
+[2026-06-20 12:12:15] [INFO] [summarization] Summarization completed for 2472267
+[2026-06-20 12:12:15] [INFO] [summarization] Summarizing 3396231
+[2026-06-20 12:25:37] [INFO] [summarization] Summarization completed for 3396231
+[2026-06-20 12:25:38] [INFO] [summarization] Summarizing 2408885
+[2026-06-20 12:42:17] [INFO] [summarization] Summarization completed for 2408885
+[2026-06-20 12:42:17] [INFO] [summarization] Summarizing 3303284
+[2026-06-20 12:58:25] [INFO] [summarization] Summarization completed for 3303284
+[2026-06-20 12:58:25] [INFO] [summarization] Summarizing 3729840
+[2026-06-20 13:08:02] [INFO] [summarization] Summarization completed for 3729840
+[2026-06-20 13:08:02] [INFO] [summarization] Summarizing 3334594
+[2026-06-20 13:23:56] [INFO] [summarization] Summarization completed for 3334594
+[2026-06-20 13:23:56] [INFO] [summarization] Summarizing 2448528
+[2026-06-20 13:41:32] [INFO] [summarization] Summarization completed for 2448528
+[2026-06-20 13:41:32] [INFO] [summarization] Summarizing 3413937
+[2026-06-20 13:54:55] [INFO] [summarization] Summarization completed for 3413937
+[2026-06-20 13:54:55] [INFO] [summarization] Summarizing 3340696
+[2026-06-20 14:09:37] [INFO] [summarization] Summarization completed for 3340696
+[2026-06-20 14:09:37] [INFO] [summarization] Summarizing 3966309
+[2026-06-20 14:24:29] [INFO] [summarization] Summarization completed for 3966309
+[2026-06-20 14:24:29] [INFO] [summarization] Summarizing 3852482
+[2026-06-20 14:36:58] [INFO] [summarization] Summarization completed for 3852482
+[2026-06-20 14:36:58] [INFO] [summarization] Summarizing 2051619
+[2026-06-20 14:47:53] [INFO] [summarization] Summarization completed for 2051619
+[2026-06-20 14:47:53] [INFO] [summarization] Summarizing 2316003
+[2026-06-20 15:00:55] [INFO] [summarization] Summarization completed for 2316003
+[2026-06-20 15:00:55] [INFO] [summarization] Summarizing 2392867
+[2026-06-20 15:14:50] [INFO] [summarization] Summarization completed for 2392867
+[2026-06-20 15:14:50] [INFO] [summarization] Summarizing 2859562
+[2026-06-20 15:33:13] [INFO] [summarization] Summarization completed for 2859562
+[2026-06-20 15:33:13] [INFO] [summarization] Summarizing 3242986
+[2026-06-20 15:50:06] [INFO] [summarization] Summarization completed for 3242986
+[2026-06-20 15:50:06] [INFO] [summarization] Summarizing 3660167
+[2026-06-20 16:03:37] [INFO] [summarization] Summarization completed for 3660167
+[2026-06-20 16:03:37] [INFO] [summarization] Summarizing 2492647
+[2026-06-20 16:18:29] [INFO] [summarization] Summarization completed for 2492647
+[2026-06-20 16:18:29] [INFO] [summarization] Summarizing 2025454
+[2026-06-20 16:40:03] [INFO] [summarization] Summarization completed for 2025454
+[2026-06-20 16:40:03] [INFO] [summarization] Summarizing 2302262
+[2026-06-20 17:12:53] [INFO] [summarization] Summarization completed for 2302262

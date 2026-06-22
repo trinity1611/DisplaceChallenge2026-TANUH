@@ -1,0 +1,1 @@
+accident,knee pain,blood sugar,heart attack

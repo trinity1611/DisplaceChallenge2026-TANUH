@@ -1,0 +1,15 @@
+[2026-06-20 21:16:28] [INFO] [summarization] ================================================================================
+[2026-06-20 21:16:28] [INFO] [summarization] Starting Summarization Pipeline
+[2026-06-20 21:16:28] [INFO] [summarization] ================================================================================
+[2026-06-20 21:16:28] [INFO] [summarization] Using CSV file: ./data/Track_4_DS_DevData_1/Hindi/GT/gt_data_summarization.csv
+[2026-06-20 21:16:28] [INFO] [summarization] Loaded configuration file
+[2026-06-20 21:16:28] [INFO] [summarization] Loading CSV file: ./data/Track_4_DS_DevData_1/Hindi/GT/gt_data_summarization.csv
+[2026-06-20 21:16:28] [INFO] [summarization] Loaded 25 records from CSV
+[2026-06-20 21:16:28] [INFO] [summarization] Successfully loaded 25 records. Skipped 0 records.
+[2026-06-20 21:16:28] [INFO] [summarization] Extracted 25 records from CSV with ASR files
+[2026-06-20 21:16:28] [INFO] [summarization] Loading summarizer with model: meta-llama/Llama-3.2-3B-Instruct
+[2026-06-20 21:16:38] [INFO] [summarizer] Loading summarization model: meta-llama/Llama-3.2-3B-Instruct
+[2026-06-20 21:16:49] [INFO] [summarizer] Model loaded successfully
+[2026-06-20 21:16:49] [INFO] [summarization] Initialized summarization model: meta-llama/Llama-3.2-3B-Instruct
+[2026-06-20 21:16:49] [INFO] [summarization] Processing summarization batch
+[2026-06-20 21:16:49] [INFO] [summarization] Summarizing 3989817

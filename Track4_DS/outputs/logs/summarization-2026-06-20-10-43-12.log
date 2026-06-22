@@ -1,0 +1,9 @@
+[2026-06-20 10:43:12] [INFO] [summarization] ================================================================================
+[2026-06-20 10:43:12] [INFO] [summarization] Starting Summarization Pipeline
+[2026-06-20 10:43:12] [INFO] [summarization] ================================================================================
+[2026-06-20 10:43:12] [INFO] [summarization] Using CSV file: ./data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv
+[2026-06-20 10:43:12] [INFO] [summarization] Loaded configuration file
+[2026-06-20 10:43:12] [INFO] [summarization] Loading CSV file: ./data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv
+[2026-06-20 10:43:12] [ERROR] [summarization] Failed to load CSV: [Errno 2] No such file or directory: './data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv'
+[2026-06-20 10:43:12] [ERROR] [summarization] Failed to extract and load ASR: [Errno 2] No such file or directory: './data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv'
+[2026-06-20 10:43:12] [ERROR] [summarization] Pipeline failed: [Errno 2] No such file or directory: './data/Track_4_DS_DevData_1/Hindi/GT/gt_dev_data_summarization.csv'

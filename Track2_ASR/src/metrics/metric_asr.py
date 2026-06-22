@@ -4,9 +4,12 @@ from datetime import datetime
 import json
 import jiwer
 import re
-import meeteval
-import meeteval.io
-import meeteval.wer
+
+try:
+    import meeteval
+except ImportError:
+    meeteval = None
+
 from utils.dataloader import ASRDataLoader
 from utils.helpers import ConfigLoader
 from utils.logger import LoggerSetup
@@ -35,8 +38,10 @@ def cpwer_to_dict(cpwer):
         "assignment": list(cpwer.assignment)
     }
 
-# Compute TCPWER per record
-def compute_tcpwer_per_record(gt_segments: List[Dict[str, Any]], pred_segments: List[Dict[str, Any]]) -> meeteval.wer.CPErrorRate:
+# Compute TCPWER per record - Changed type hint to "Any" to avoid None Type attribute errors
+def compute_tcpwer_per_record(gt_segments: List[Dict[str, Any]], pred_segments: List[Dict[str, Any]]) -> Any:
+    if meeteval is None:
+        return None
     ref = meeteval.io.asseglst(gt_segments)
     hyp = meeteval.io.asseglst(pred_segments)
     cpwer = meeteval.wer.tcpwer(ref, hyp, collar=COLLAR_INTERVAL, normalizer=normalizer)
@@ -122,6 +127,10 @@ class TranscriptionMetrics:
         """
         Compute TCPWER across all records using ASRDataLoader
         """
+        if meeteval is None:
+            logger.warning("meeteval is not installed. Skipping TCPWER calculation step entirely.")
+            return {"status": "skipped", "reason": "meeteval not installed"}
+
         # Initialize dataloader
         dataloader = ASRDataLoader(common_config)
         logger.info("Loading data for tcpWER computation...")
@@ -161,12 +170,6 @@ class TranscriptionMetrics:
             all_wers.append(combined.error_rate)
 
             logger.info(f"{rec_id}: TCPWER = {combined.error_rate:.3f}")
-
-        # # Save results
-        # if output_file:
-        #     with open(output_file, 'w', encoding='utf-8') as f:
-        #         json.dump(individual_results, f, indent=2)
-        #     logger.info(f"Saved TCPWER results to {output_file}")
 
         avg_tcpwer = sum(all_wers) / len(all_wers) if all_wers else 0.0
         logger.info(f"Average TCPWER across all records: {avg_tcpwer:.3f}")

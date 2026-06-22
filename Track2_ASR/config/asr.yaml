@@ -2,7 +2,7 @@ paths:
   data_dir: "./data"
   output_dir: "./outputs"
   logs_dir: "./outputs/logs"
-  diarization_output_dir: "../Track1_SD/data_directory/gen_rttm"
+  diarization_output_dir: "C:/Users/Hp/DISPLACE-2026-Baselines/Track1_SD/gen_rttm"
   asr_output_dir: "./outputs/ASR"
   metrics_output_dir: "./outputs/metrics"
 
