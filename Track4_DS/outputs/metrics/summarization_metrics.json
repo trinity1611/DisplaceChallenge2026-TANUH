@@ -1,0 +1,266 @@
+{
+  "batch_metrics": {
+    "total_files": 25,
+    "timestamp": "2026-06-23T18:47:28.625420",
+    "avg_rougeL": 0.18153690482744136,
+    "max_rougeL": 0.2758620689655173,
+    "min_rougeL": 0.13377926421404682,
+    "avg_bertscore_f1": 0.8556042790412903,
+    "max_bertscore_f1": 0.8891649842262268,
+    "min_bertscore_f1": 0.8233668208122253,
+    "avg_generated_length": 126.52,
+    "avg_reference_length": 139.8
+  },
+  "file_metrics": [
+    {
+      "rougeL": 0.1789137380191693,
+      "bertscore_precision": 0.8608648777008057,
+      "bertscore_recall": 0.8443673849105835,
+      "bertscore_f1": 0.8525363206863403,
+      "ground_truth_length": 170,
+      "generated_length": 134,
+      "length_ratio": 0.788235294117647,
+      "rec_id": "3989817"
+    },
+    {
+      "rougeL": 0.16312056737588654,
+      "bertscore_precision": 0.867441713809967,
+      "bertscore_recall": 0.8350568413734436,
+      "bertscore_f1": 0.8509413003921509,
+      "ground_truth_length": 177,
+      "generated_length": 97,
+      "length_ratio": 0.5480225988700564,
+      "rec_id": "2507155"
+    },
+    {
+      "rougeL": 0.19636363636363638,
+      "bertscore_precision": 0.8694093823432922,
+      "bertscore_recall": 0.8537485599517822,
+      "bertscore_f1": 0.8615078330039978,
+      "ground_truth_length": 123,
+      "generated_length": 141,
+      "length_ratio": 1.146341463414634,
+      "rec_id": "3519376"
+    },
+    {
+      "rougeL": 0.17045454545454544,
+      "bertscore_precision": 0.8682602047920227,
+      "bertscore_recall": 0.845761775970459,
+      "bertscore_f1": 0.8568633198738098,
+      "ground_truth_length": 165,
+      "generated_length": 166,
+      "length_ratio": 1.006060606060606,
+      "rec_id": "2907609"
+    },
+    {
+      "rougeL": 0.15770609318996415,
+      "bertscore_precision": 0.8628139495849609,
+      "bertscore_recall": 0.8318682312965393,
+      "bertscore_f1": 0.8470585942268372,
+      "ground_truth_length": 164,
+      "generated_length": 104,
+      "length_ratio": 0.6341463414634146,
+      "rec_id": "2669941"
+    },
+    {
+      "rougeL": 0.18315018315018314,
+      "bertscore_precision": 0.8672559261322021,
+      "bertscore_recall": 0.8422096371650696,
+      "bertscore_f1": 0.8545493483543396,
+      "ground_truth_length": 142,
+      "generated_length": 123,
+      "length_ratio": 0.8661971830985915,
+      "rec_id": "2472267"
+    },
+    {
+      "rougeL": 0.18181818181818182,
+      "bertscore_precision": 0.8611357808113098,
+      "bertscore_recall": 0.8398140668869019,
+      "bertscore_f1": 0.850341260433197,
+      "ground_truth_length": 94,
+      "generated_length": 119,
+      "length_ratio": 1.2659574468085106,
+      "rec_id": "3396231"
+    },
+    {
+      "rougeL": 0.16589861751152077,
+      "bertscore_precision": 0.8300569653511047,
+      "bertscore_recall": 0.8707013130187988,
+      "bertscore_f1": 0.8498935103416443,
+      "ground_truth_length": 69,
+      "generated_length": 141,
+      "length_ratio": 2.0434782608695654,
+      "rec_id": "2408885"
+    },
+    {
+      "rougeL": 0.20080321285140562,
+      "bertscore_precision": 0.876981258392334,
+      "bertscore_recall": 0.8600602149963379,
+      "bertscore_f1": 0.8684383034706116,
+      "ground_truth_length": 117,
+      "generated_length": 123,
+      "length_ratio": 1.0512820512820513,
+      "rec_id": "3303284"
+    },
+    {
+      "rougeL": 0.2758620689655173,
+      "bertscore_precision": 0.8790667057037354,
+      "bertscore_recall": 0.8994979858398438,
+      "bertscore_f1": 0.8891649842262268,
+      "ground_truth_length": 54,
+      "generated_length": 116,
+      "length_ratio": 2.1481481481481484,
+      "rec_id": "3729840"
+    },
+    {
+      "rougeL": 0.17117117117117114,
+      "bertscore_precision": 0.8651338815689087,
+      "bertscore_recall": 0.859464168548584,
+      "bertscore_f1": 0.8622896671295166,
+      "ground_truth_length": 85,
+      "generated_length": 127,
+      "length_ratio": 1.4941176470588236,
+      "rec_id": "3334594"
+    },
+    {
+      "rougeL": 0.16666666666666666,
+      "bertscore_precision": 0.8816712498664856,
+      "bertscore_recall": 0.8495398759841919,
+      "bertscore_f1": 0.8653073906898499,
+      "ground_truth_length": 168,
+      "generated_length": 97,
+      "length_ratio": 0.5773809523809523,
+      "rec_id": "2448528"
+    },
+    {
+      "rougeL": 0.13377926421404682,
+      "bertscore_precision": 0.8491822481155396,
+      "bertscore_recall": 0.8253164887428284,
+      "bertscore_f1": 0.8370792865753174,
+      "ground_truth_length": 168,
+      "generated_length": 121,
+      "length_ratio": 0.7202380952380952,
+      "rec_id": "3413937"
+    },
+    {
+      "rougeL": 0.15384615384615385,
+      "bertscore_precision": 0.8644959330558777,
+      "bertscore_recall": 0.8274090886116028,
+      "bertscore_f1": 0.8455460667610168,
+      "ground_truth_length": 195,
+      "generated_length": 116,
+      "length_ratio": 0.5948717948717949,
+      "rec_id": "3340696"
+    },
+    {
+      "rougeL": 0.16826923076923078,
+      "bertscore_precision": 0.859473705291748,
+      "bertscore_recall": 0.8273302912712097,
+      "bertscore_f1": 0.8430957198143005,
+      "ground_truth_length": 229,
+      "generated_length": 155,
+      "length_ratio": 0.6768558951965066,
+      "rec_id": "3966309"
+    },
+    {
+      "rougeL": 0.20494699646643105,
+      "bertscore_precision": 0.8753565549850464,
+      "bertscore_recall": 0.8699212670326233,
+      "bertscore_f1": 0.8726304173469543,
+      "ground_truth_length": 135,
+      "generated_length": 142,
+      "length_ratio": 1.0518518518518518,
+      "rec_id": "3852482"
+    },
+    {
+      "rougeL": 0.19801980198019803,
+      "bertscore_precision": 0.8803302645683289,
+      "bertscore_recall": 0.8670941591262817,
+      "bertscore_f1": 0.8736621141433716,
+      "ground_truth_length": 100,
+      "generated_length": 98,
+      "length_ratio": 0.98,
+      "rec_id": "2051619"
+    },
+    {
+      "rougeL": 0.23015873015873017,
+      "bertscore_precision": 0.8566244840621948,
+      "bertscore_recall": 0.8422890901565552,
+      "bertscore_f1": 0.849396288394928,
+      "ground_truth_length": 120,
+      "generated_length": 126,
+      "length_ratio": 1.05,
+      "rec_id": "2316003"
+    },
+    {
+      "rougeL": 0.20491803278688525,
+      "bertscore_precision": 0.8724179863929749,
+      "bertscore_recall": 0.8340027332305908,
+      "bertscore_f1": 0.8527779579162598,
+      "ground_truth_length": 126,
+      "generated_length": 112,
+      "length_ratio": 0.8888888888888888,
+      "rec_id": "2392867"
+    },
+    {
+      "rougeL": 0.1741573033707865,
+      "bertscore_precision": 0.8718931674957275,
+      "bertscore_recall": 0.8425556421279907,
+      "bertscore_f1": 0.8569733500480652,
+      "ground_truth_length": 209,
+      "generated_length": 141,
+      "length_ratio": 0.6746411483253588,
+      "rec_id": "2859562"
+    },
+    {
+      "rougeL": 0.16666666666666666,
+      "bertscore_precision": 0.8481221199035645,
+      "bertscore_recall": 0.8254448771476746,
+      "bertscore_f1": 0.8366298675537109,
+      "ground_truth_length": 113,
+      "generated_length": 133,
+      "length_ratio": 1.176991150442478,
+      "rec_id": "3242986"
+    },
+    {
+      "rougeL": 0.19266055045871555,
+      "bertscore_precision": 0.8748875856399536,
+      "bertscore_recall": 0.8744762539863586,
+      "bertscore_f1": 0.874681830406189,
+      "ground_truth_length": 87,
+      "generated_length": 121,
+      "length_ratio": 1.3908045977011494,
+      "rec_id": "3660167"
+    },
+    {
+      "rougeL": 0.17777777777777778,
+      "bertscore_precision": 0.8606067895889282,
+      "bertscore_recall": 0.7892161011695862,
+      "bertscore_f1": 0.8233668208122253,
+      "ground_truth_length": 187,
+      "generated_length": 151,
+      "length_ratio": 0.8074866310160428,
+      "rec_id": "2492647"
+    },
+    {
+      "rougeL": 0.16339869281045752,
+      "bertscore_precision": 0.8599227666854858,
+      "bertscore_recall": 0.8489059209823608,
+      "bertscore_f1": 0.8543788194656372,
+      "ground_truth_length": 154,
+      "generated_length": 146,
+      "length_ratio": 0.948051948051948,
+      "rec_id": "2025454"
+    },
+    {
+      "rougeL": 0.15789473684210525,
+      "bertscore_precision": 0.8715170621871948,
+      "bertscore_recall": 0.8507270812988281,
+      "bertscore_f1": 0.8609966039657593,
+      "ground_truth_length": 144,
+      "generated_length": 113,
+      "length_ratio": 0.7847222222222222,
+      "rec_id": "2302262"
+    }
+  ]
+}
