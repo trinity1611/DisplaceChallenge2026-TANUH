@@ -14,6 +14,7 @@ chunk_size = 16
 use_posi = false
 output_activate_function = false
 selected_channel = 0
+max_speakers_per_chunk = 11
 
 [inference.args]
 seg_duration = 16

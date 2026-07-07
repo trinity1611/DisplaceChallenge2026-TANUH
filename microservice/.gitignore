@@ -1,0 +1,14 @@
+# DISPLACE MedAI
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.env
+*.db
+uploads/
+results/
+.vscode/
+.idea/
+*.log
