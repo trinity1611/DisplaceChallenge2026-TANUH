@@ -16,14 +16,14 @@ from backend.app.config import settings
 
 def main():
     print()
-    print("╔════════════════════════════════════════════════════════╗")
-    print("║            DISPLACE MedAI Microservice                ║")
-    print("║        Medical Audio Analysis Pipeline                ║")
-    print("╚════════════════════════════════════════════════════════╝")
+    print("==========================================================")
+    print("|            DISPLACE MedAI Microservice                 |")
+    print("|        Medical Audio Analysis Pipeline                 |")
+    print("==========================================================")
     print()
-    print(f"  🌐 Server:  http://localhost:{settings.port}")
-    print(f"  📖 API Docs: http://localhost:{settings.port}/docs")
-    print(f"  🔧 Device:   {settings.device}")
+    print(f"  [Server]  http://localhost:{settings.port}")
+    print(f"  [API Docs] http://localhost:{settings.port}/docs")
+    print(f"  [Device]   {settings.device}")
     print()
 
     uvicorn.run(

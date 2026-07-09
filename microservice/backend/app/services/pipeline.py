@@ -39,6 +39,21 @@ def _update_job(job_id: str, **kwargs) -> None:
         db.close()
 
 
+def _update_result(job_id: str, **kwargs) -> None:
+    """Helper to update or create result in the database."""
+    db = SessionLocal()
+    try:
+        result = db.query(Result).filter(Result.job_id == job_id).first()
+        if not result:
+            result = Result(job_id=job_id)
+            db.add(result)
+        for key, value in kwargs.items():
+            setattr(result, key, value)
+        db.commit()
+    finally:
+        db.close()
+
+
 def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
     """
     Execute the full 4-stage ML pipeline for a given job.
@@ -54,6 +69,9 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
     logger.info(f"Audio: {audio_file.name}, Language: {language}")
 
     try:
+        # Create Result row immediately for streaming
+        _update_result(job_id)
+
         # ──────────────────────────────────────────────────────────
         # STAGE 1: Speaker Diarization (Track 1)
         # ──────────────────────────────────────────────────────────
@@ -92,10 +110,18 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
             stage_message="Loading ASR model & transcribing...",
         )
 
+        def on_segment_done(segments, parts):
+            _update_result(
+                job_id,
+                transcript_json=json.dumps(segments),
+                full_transcript=" ".join(parts).strip()
+            )
+
         asr_result = transcription_service.run(
             audio_path=audio_file,
             diarization_segments=diar_segments,
             language_id=language,
+            on_segment_done=on_segment_done,
         )
         transcript_segments = asr_result["segments"]
         full_transcript = asr_result["full_transcript"]
@@ -125,6 +151,8 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
         )
 
         topic_result = topic_extraction_service.run(full_transcript)
+        
+        _update_result(job_id, topics=topic_result["topics"])
 
         _update_job(
             job_id,
@@ -150,6 +178,8 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
         )
 
         summary_result = summarization_service.run(full_transcript)
+        
+        _update_result(job_id, summary=summary_result["summary"])
 
         _update_job(
             job_id,
@@ -170,34 +200,24 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
         # ──────────────────────────────────────────────────────────
         total_elapsed = time.time() - total_start
 
-        db = SessionLocal()
-        try:
-            result = Result(
-                job_id=job_id,
-                num_speakers=num_speakers,
-                diarization_json=json.dumps(diar_segments),
-                transcript_json=json.dumps(transcript_segments),
-                full_transcript=full_transcript,
-                topics=topic_result["topics"],
-                summary=summary_result["summary"],
-                diarization_time_s=round(diarization_result["elapsed_s"], 2),
-                asr_time_s=round(asr_result["elapsed_s"], 2),
-                topic_time_s=round(topic_result["elapsed_s"], 2),
-                summary_time_s=round(summary_result["elapsed_s"], 2),
-                total_time_s=round(total_elapsed, 2),
-            )
-            db.add(result)
+        _update_result(
+            job_id,
+            num_speakers=num_speakers,
+            diarization_json=json.dumps(diar_segments),
+            diarization_time_s=round(diarization_result["elapsed_s"], 2),
+            asr_time_s=round(asr_result["elapsed_s"], 2),
+            topic_time_s=round(topic_result["elapsed_s"], 2),
+            summary_time_s=round(summary_result["elapsed_s"], 2),
+            total_time_s=round(total_elapsed, 2),
+        )
 
-            job = db.query(Job).filter(Job.id == job_id).first()
-            if job:
-                job.status = "COMPLETED"
-                job.progress = 100
-                job.stage_message = f"Pipeline complete in {total_elapsed:.1f}s"
-                job.completed_at = datetime.now(timezone.utc)
-
-            db.commit()
-        finally:
-            db.close()
+        _update_job(
+            job_id,
+            status="COMPLETED",
+            progress=100,
+            stage_message=f"Pipeline complete in {total_elapsed:.1f}s",
+            completed_at=datetime.now(timezone.utc)
+        )
 
         logger.info(
             f"═══ Pipeline completed for job {job_id} in {total_elapsed:.1f}s ═══"

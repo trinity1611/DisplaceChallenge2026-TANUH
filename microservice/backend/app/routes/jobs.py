@@ -143,11 +143,7 @@ async def get_job_results(job_id: str):
         if not job:
             raise HTTPException(status_code=404, detail="Job not found")
 
-        if job.status != "COMPLETED":
-            raise HTTPException(
-                status_code=400,
-                detail=f"Job is not completed yet (status: {job.status})",
-            )
+
 
         result = db.query(Result).filter(Result.job_id == job_id).first()
         if not result:
@@ -163,8 +159,9 @@ async def get_job_results(job_id: str):
             for seg in json.loads(result.transcript_json)
         ]
 
+        topics_str = result.topics or ""
         topics_list = [
-            t.strip() for t in result.topics.split(",") if t.strip()
+            t.strip() for t in topics_str.split(",") if t.strip()
         ]
 
         return PipelineResults(

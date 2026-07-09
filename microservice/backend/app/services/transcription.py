@@ -75,6 +75,7 @@ class TranscriptionService:
         diarization_segments: List[Dict[str, Any]],
         language_id: str = "hi",
         target_sr: int = 16000,
+        on_segment_done: Optional[callable] = None,
     ) -> Dict[str, Any]:
         """
         Transcribe audio using diarization segments.
@@ -83,6 +84,9 @@ class TranscriptionService:
             audio_path: Path to the .wav file
             diarization_segments: List of {start_time, end_time, speaker_id}
             language_id: Language code ("hi" for Hindi, "kn" for Kannada)
+            target_sr: Target sample rate for audio
+            on_segment_done: Callback invoked after each segment is transcribed, 
+                             passed the list of all transcript segments so far.
 
         Returns:
             {
@@ -155,6 +159,9 @@ class TranscriptionService:
                 "speaker_id": seg["speaker_id"],
                 "text": text,
             })
+
+            if on_segment_done:
+                on_segment_done(transcript_segments, full_transcript_parts)
 
         full_transcript = " ".join(full_transcript_parts).strip()
         elapsed = time.time() - start_time_wall

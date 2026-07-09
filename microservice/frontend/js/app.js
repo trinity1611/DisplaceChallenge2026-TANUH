@@ -11,9 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnProcess = document.getElementById('btn-process');
     const langSelect = document.getElementById('language-select');
     
-    const outputContent = document.getElementById('output-content');
-    const btnCopy = document.getElementById('btn-copy');
-    const btnDownload = document.getElementById('btn-download');
+    const statusBar = document.getElementById('status-bar');
+    const statusText = document.getElementById('status-text');
+    const outputWrapper = document.getElementById('output-wrapper');
+    
+    const transcriptBody = document.getElementById('transcript-body');
+    const topicContent = document.getElementById('topic-content');
+    const summaryContent = document.getElementById('summary-content');
+    
+    const btnCopyTranscript = document.getElementById('btn-copy-transcript');
+    const btnDownloadTranscript = document.getElementById('btn-download-transcript');
+    
+    const btnCopyTopic = document.getElementById('btn-copy-topic');
+    const btnDownloadTopic = document.getElementById('btn-download-topic');
+    
+    const btnCopySummary = document.getElementById('btn-copy-summary');
+    const btnDownloadSummary = document.getElementById('btn-download-summary');
     
     let selectedFile = null;
     let pollInterval = null;
@@ -70,8 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // UI updates
         btnProcess.disabled = true;
         btnProcess.textContent = 'Processing...';
-        outputContent.innerHTML = '';
-        logToOutput('Starting process...', 'progress-log');
+        outputWrapper.style.display = 'none';
+        statusBar.style.display = 'block';
+        logToOutput('Starting process...');
         lastProcessedResults = null;
 
         try {
@@ -105,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
             logToOutput(`Waiting for GPU resources...`, 'progress-log');
 
             // 3. Poll Status
-            let lastMessage = '';
+            let lastStatus = '';
             pollInterval = setInterval(async () => {
                 try {
                     const statResp = await fetch(`/api/jobs/${jobId}`);
@@ -113,15 +127,36 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     const statData = await statResp.json();
                     
-                    if (statData.stage_message && statData.stage_message !== lastMessage) {
-                        lastMessage = statData.stage_message;
-                        logToOutput(`[${statData.progress}%] ${lastMessage}`, 'progress-log');
+                    if (statData.status && statData.status !== lastStatus) {
+                        lastStatus = statData.status;
+                        const statusMap = {
+                            'UPLOADED': 'Uploaded',
+                            'QUEUED': 'Queued',
+                            'DIARIZING': 'Diarization',
+                            'TRANSCRIBING': 'ASR and transcription',
+                            'TOPIC_EXTRACTION': 'Topic',
+                            'SUMMARIZING': 'Summarization',
+                            'COMPLETED': 'Completed',
+                            'FAILED': 'Failed'
+                        };
+                        const displayStatus = statusMap[statData.status] || statData.status;
+                        logToOutput(`......${displayStatus}`, 'progress-log');
+                    }
+                    
+                    const progressBarFill = document.getElementById('progress-bar-fill');
+                    if (progressBarFill && statData.progress !== undefined) {
+                        progressBarFill.style.width = `${statData.progress}%`;
+                    }
+
+                    // Fetch partial results if past diarizing phase
+                    if (['TRANSCRIBING', 'TOPIC_EXTRACTION', 'SUMMARIZING', 'COMPLETED'].includes(statData.status)) {
+                        fetchAndDisplayResults(jobId, statData.status === 'COMPLETED');
                     }
 
                     if (statData.status === 'COMPLETED') {
                         clearInterval(pollInterval);
-                        logToOutput(`Pipeline finished successfully! Fetching results...`, 'progress-log');
-                        fetchAndDisplayResults(jobId);
+                        logToOutput(`......Completed!`, 'progress-log');
+                        if (progressBarFill) progressBarFill.style.width = `100%`;
                     } else if (statData.status === 'FAILED') {
                         clearInterval(pollInterval);
                         logToOutput(`Pipeline Failed: ${statData.error_message}`, 'error-log');
@@ -140,47 +175,71 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    async function fetchAndDisplayResults(jobId) {
+    async function fetchAndDisplayResults(jobId, isComplete = false) {
         try {
             const resp = await fetch(`/api/jobs/${jobId}/results`);
-            if (!resp.ok) throw new Error('Failed to fetch results');
+            if (!resp.ok) return;
             
             const results = await resp.json();
             lastProcessedResults = results;
             
-            outputContent.innerHTML = ''; // clear logs
+            if (results.transcript && results.transcript.length > 0) {
+                if (isComplete) {
+                    statusBar.style.display = 'none';
+                }
+                outputWrapper.style.display = 'block';
+                
+                // Render Transcript Table
+                transcriptBody.innerHTML = '';
+                results.transcript.forEach(seg => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td><strong>${seg.speaker_id}</strong></td>
+                        <td>${formatTime(seg.start_time)} - ${formatTime(seg.end_time)}</td>
+                        <td>${seg.text}</td>
+                    `;
+                    transcriptBody.appendChild(tr);
+                });
+                
+                // Auto-scroll to bottom as new transcripts are added
+                const transcriptContainer = document.querySelector('.output-panel-content.transcript-content');
+                if (transcriptContainer && !isComplete) {
+                    transcriptContainer.scrollTop = transcriptContainer.scrollHeight;
+                }
+            }
             
-            // Format nice output
-            let outputHtml = '';
+            // Render Topic
+            if (results.topics) {
+                topicContent.innerHTML = results.topics.replace(/,/g, ', ');
+            } else {
+                topicContent.innerHTML = isComplete ? 'No topics detected.' : '<i>Generating topics...</i>';
+            }
             
-            // Summary
-            outputHtml += `<div class="result-section">=== CLINICAL SUMMARY ===</div>`;
-            outputHtml += `<div>${results.summary.replace(/\n/g, '<br>')}</div>\n`;
+            // Render Summary
+            if (results.summary) {
+                summaryContent.innerHTML = results.summary.replace(/\n/g, '<br>');
+            } else {
+                summaryContent.innerHTML = isComplete ? 'No summary generated.' : '<i>Generating summary...</i>';
+            }
             
-            // Transcript
-            outputHtml += `<div class="result-section">=== TRANSCRIPT ===</div>`;
-            results.transcript.forEach(seg => {
-                outputHtml += `<div>[${formatTime(seg.start_time)} - ${formatTime(seg.end_time)}] <strong>${seg.speaker_id}:</strong> ${seg.text}</div>`;
-            });
-            
-            outputContent.innerHTML = outputHtml;
-            
-            showToast('Processing complete!', 'success');
-            btnProcess.textContent = 'Process Complete';
-            
-            // Show the Done button
-            const btnDone = document.getElementById('btn-done');
-            if (btnDone) {
-                btnDone.style.display = 'inline-block';
-                // Remove existing listener to prevent duplicates if any, then add
-                btnDone.onclick = () => {
-                    window.location.reload();
-                };
+            if (isComplete) {
+                showToast('Processing complete!', 'success');
+                btnProcess.textContent = 'Process Complete';
+                
+                const btnDone = document.getElementById('btn-done');
+                if (btnDone) {
+                    btnDone.style.display = 'inline-block';
+                    btnDone.onclick = () => {
+                        window.location.reload();
+                    };
+                }
             }
             
         } catch (err) {
-            logToOutput(`Error fetching results: ${err.message}`, 'error-log');
-            resetProcessButton();
+            console.error(`Error fetching results: ${err.message}`);
+            if (isComplete) {
+                resetProcessButton();
+            }
         }
     }
 
@@ -190,11 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function logToOutput(msg, className = '') {
-        const div = document.createElement('div');
-        div.className = className;
-        div.textContent = msg;
-        outputContent.appendChild(div);
-        outputContent.scrollTop = outputContent.scrollHeight;
+        statusText.textContent = msg;
     }
 
     function formatTime(seconds) {
@@ -205,25 +260,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Actions ---
 
-    btnCopy.addEventListener('click', () => {
-        if (!lastProcessedResults) return;
-        const text = outputContent.innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            showToast('Results copied to clipboard');
+    function setupCopy(btnElement, textGetter, successMsg) {
+        btnElement.addEventListener('click', () => {
+            if (!lastProcessedResults) return;
+            navigator.clipboard.writeText(textGetter()).then(() => {
+                showToast(successMsg);
+            });
         });
-    });
+    }
 
-    btnDownload.addEventListener('click', () => {
-        if (!lastProcessedResults) return;
-        
-        // Save as Text
-        const text = outputContent.innerText;
-        const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(text);
-        const a = document.createElement('a');
-        a.href = dataStr;
-        a.download = "medical_analysis_results.txt";
-        a.click();
-    });
+    function setupDownload(btnElement, textGetter, filename) {
+        btnElement.addEventListener('click', () => {
+            if (!lastProcessedResults) return;
+            const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(textGetter());
+            const a = document.createElement('a');
+            a.href = dataStr;
+            a.download = filename;
+            a.click();
+        });
+    }
+
+    // Transcript Actions
+    const getTranscriptText = () => lastProcessedResults.transcript.map(s => `[${formatTime(s.start_time)} - ${formatTime(s.end_time)}] ${s.speaker_id}: ${s.text}`).join('\n');
+    setupCopy(btnCopyTranscript, getTranscriptText, 'Transcript copied!');
+    setupDownload(btnDownloadTranscript, getTranscriptText, 'transcript.txt');
+
+    // Topic Actions
+    const getTopicText = () => lastProcessedResults.topics || 'No topics detected.';
+    setupCopy(btnCopyTopic, getTopicText, 'Topics copied!');
+    setupDownload(btnDownloadTopic, getTopicText, 'topics.txt');
+
+    // Summary Actions
+    const getSummaryText = () => lastProcessedResults.summary || 'No summary generated.';
+    setupCopy(btnCopySummary, getSummaryText, 'Summary copied!');
+    setupDownload(btnDownloadSummary, getSummaryText, 'summary.txt');
 
     // --- Toast UI ---
 
