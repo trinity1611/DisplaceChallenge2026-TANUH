@@ -7,12 +7,13 @@
 const ResultsModule = (() => {
 
     /**
-     * Render all results (transcript, topics, summary).
+     * Render all results (transcript, topics, summary, fhir).
      */
     function renderAll(results) {
         renderTranscript(results.transcript);
         renderTopics(results.topics_list, results.topics);
         renderSummary(results.summary);
+        renderFHIR(results.fhir_bundle);
     }
 
     /**
@@ -142,6 +143,54 @@ const ResultsModule = (() => {
                 App.showToast('Summary copied to clipboard', 'success');
             });
         };
+    }
+
+    /**
+     * Render FHIR R4 Bundle.
+     */
+    function renderFHIR(fhirBundleStr) {
+        const preEl = document.getElementById('fhir-content');
+        
+        if (!fhirBundleStr || fhirBundleStr.trim() === '') {
+            preEl.innerHTML = '<span style="color:#64748b;">No FHIR Bundle available</span>';
+            return;
+        }
+
+        // Try to parse and pretty-print JSON if it's not already formatted well
+        let displayStr = fhirBundleStr;
+        try {
+            const parsed = JSON.parse(fhirBundleStr);
+            displayStr = JSON.stringify(parsed, null, 2);
+        } catch (e) {
+            // Leave as string if parsing fails
+        }
+
+        preEl.textContent = displayStr;
+
+        // Setup copy and download actions
+        const btnCopy = document.getElementById('btn-copy-fhir');
+        const btnDownload = document.getElementById('btn-download-fhir');
+
+        if (btnCopy) {
+            btnCopy.onclick = () => {
+                navigator.clipboard.writeText(displayStr).then(() => {
+                    App.showToast('FHIR JSON copied to clipboard', 'success');
+                });
+            };
+        }
+
+        if (btnDownload) {
+            btnDownload.onclick = () => {
+                const blob = new Blob([displayStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'fhir_bundle.json';
+                a.click();
+                URL.revokeObjectURL(url);
+                App.showToast('FHIR Bundle downloaded', 'success');
+            };
+        }
     }
 
     /**

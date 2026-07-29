@@ -1,8 +1,8 @@
 """
 DISPLACE MedAI – Pipeline Orchestrator
 =========================================
-Chains all 4 tracks sequentially:
-  Track 1 (SD) → Track 2 (ASR) → Track 3 (TI) + Track 4 (DS)
+Chains all 5 tracks sequentially:
+  Track 1 (SD) → Track 2 (ASR) → Track 3 (TI) + Track 4 (DS) → Track 5 (FHIR)
 
 Runs as a background task, updating job status in the database
 so the frontend can poll for progress.
@@ -22,6 +22,7 @@ from backend.app.services.diarization import diarization_service
 from backend.app.services.transcription import transcription_service
 from backend.app.services.topic_extraction import topic_extraction_service
 from backend.app.services.summarization import summarization_service
+from backend.app.services.fhir_extraction import fhir_extraction_service
 
 logger = logging.getLogger("displace.pipeline")
 
@@ -97,8 +98,7 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
             f"{len(diar_segments)} segments, {diarization_result['elapsed_s']:.1f}s"
         )
         
-        # Unload Diarization model to free VRAM for ASR
-        diarization_service.unload_model()
+        # Models kept loaded for faster subsequent runs
 
         # ──────────────────────────────────────────────────────────
         # STAGE 2: ASR Transcription (Track 2)
@@ -136,9 +136,7 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
             f"[Stage 2] ASR: {len(transcript_segments)} segments, "
             f"{len(full_transcript)} chars, {asr_result['elapsed_s']:.1f}s"
         )
-        
-        # Unload ASR model to free VRAM for Topic Extraction (Qwen)
-        transcription_service.unload_model()
+
 
         # ──────────────────────────────────────────────────────────
         # STAGE 3: Topic Identification (Track 3)
@@ -164,8 +162,7 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
             f"[Stage 3] Topics: {topic_result['topics']} ({topic_result['elapsed_s']:.1f}s)"
         )
 
-        # Unload Qwen to free VRAM for LLaMA
-        topic_extraction_service.unload_model()
+
 
         # ──────────────────────────────────────────────────────────
         # STAGE 4: Dialogue Summarization (Track 4)
@@ -192,8 +189,38 @@ def run_pipeline(job_id: str, audio_path: str, language: str = "hi") -> None:
             f"({summary_result['elapsed_s']:.1f}s)"
         )
 
-        # Unload LLaMA to free VRAM
-        summarization_service.unload_model()
+
+
+        # ──────────────────────────────────────────────────────────
+        # STAGE 5: FHIR R4 Extraction (Track 5)
+        # ──────────────────────────────────────────────────────────
+        _update_job(
+            job_id,
+            status="FHIR_EXTRACTION",
+            progress=90,
+            stage_message="Extracting FHIR R4 bundle via MedGemma...",
+        )
+
+        fhir_result = fhir_extraction_service.run(summary_result["summary"])
+
+        _update_result(
+            job_id,
+            fhir_bundle=fhir_result["fhir_json"],
+            fhir_time_s=round(fhir_result["elapsed_s"], 2),
+        )
+
+        _update_job(
+            job_id,
+            progress=95,
+            stage_message=f"FHIR extraction complete – {'valid' if fhir_result['valid'] else 'has issues'}",
+        )
+
+        logger.info(
+            f"[Stage 5] FHIR: {'valid' if fhir_result['valid'] else 'invalid'} "
+            f"bundle ({fhir_result['elapsed_s']:.1f}s)"
+        )
+
+
 
         # ──────────────────────────────────────────────────────────
         # SAVE RESULTS

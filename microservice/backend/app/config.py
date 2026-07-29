@@ -46,6 +46,16 @@ class Settings(BaseSettings):
         alias="LLAMA_MODEL_ID",
     )
 
+    # ── FHIR / vLLM ─────────────────────────────────────────────────
+    vllm_api_base: str = Field(
+        default="http://n2:8000/v1",
+        alias="VLLM_API_BASE",
+    )
+    medgemma_model_id: str = Field(
+        default="google/medgemma-27b-text-it",
+        alias="MEDGEMMA_MODEL_ID",
+    )
+
     # ── Upload ───────────────────────────────────────────────────────
     max_upload_size_mb: int = Field(default=100, alias="MAX_UPLOAD_SIZE_MB")
 

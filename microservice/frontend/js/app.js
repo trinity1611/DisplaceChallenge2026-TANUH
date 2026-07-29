@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const transcriptBody = document.getElementById('transcript-body');
     const topicContent = document.getElementById('topic-content');
     const summaryContent = document.getElementById('summary-content');
+    const fhirContent = document.getElementById('fhir-content');
     
     const btnCopyTranscript = document.getElementById('btn-copy-transcript');
     const btnDownloadTranscript = document.getElementById('btn-download-transcript');
@@ -27,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const btnCopySummary = document.getElementById('btn-copy-summary');
     const btnDownloadSummary = document.getElementById('btn-download-summary');
+    
+    const btnCopyFhir = document.getElementById('btn-copy-fhir');
+    const btnDownloadFhir = document.getElementById('btn-download-fhir');
     
     let selectedFile = null;
     let pollInterval = null;
@@ -136,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             'TRANSCRIBING': 'ASR and transcription',
                             'TOPIC_EXTRACTION': 'Topic',
                             'SUMMARIZING': 'Summarization',
+                            'FHIR_EXTRACTION': 'FHIR Extraction',
                             'COMPLETED': 'Completed',
                             'FAILED': 'Failed'
                         };
@@ -149,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
 
                     // Fetch partial results if past diarizing phase
-                    if (['TRANSCRIBING', 'TOPIC_EXTRACTION', 'SUMMARIZING', 'COMPLETED'].includes(statData.status)) {
+                    if (['TRANSCRIBING', 'TOPIC_EXTRACTION', 'SUMMARIZING', 'FHIR_EXTRACTION', 'COMPLETED'].includes(statData.status)) {
                         fetchAndDisplayResults(jobId, statData.status === 'COMPLETED');
                     }
 
@@ -220,6 +225,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 summaryContent.innerHTML = results.summary.replace(/\n/g, '<br>');
             } else {
                 summaryContent.innerHTML = isComplete ? 'No summary generated.' : '<i>Generating summary...</i>';
+            }
+            
+            // Render FHIR Bundle
+            if (fhirContent) {
+                if (results.fhir_json) {
+                    let displayStr = results.fhir_json;
+                    try {
+                        const parsed = JSON.parse(results.fhir_json);
+                        displayStr = JSON.stringify(parsed, null, 2);
+                    } catch (e) { /* use raw string */ }
+                    fhirContent.textContent = displayStr;
+                } else if (results.fhir_bundle) {
+                    fhirContent.textContent = JSON.stringify(results.fhir_bundle, null, 2);
+                } else {
+                    fhirContent.innerHTML = isComplete ? '<span style="color:#64748b;">No FHIR bundle generated.</span>' : '<span style="color:#64748b;"><i>Generating FHIR bundle...</i></span>';
+                }
             }
             
             if (isComplete) {
@@ -294,6 +315,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const getSummaryText = () => lastProcessedResults.summary || 'No summary generated.';
     setupCopy(btnCopySummary, getSummaryText, 'Summary copied!');
     setupDownload(btnDownloadSummary, getSummaryText, 'summary.txt');
+
+    // FHIR Actions
+    const getFhirText = () => {
+        if (!lastProcessedResults) return '';
+        if (lastProcessedResults.fhir_json) return lastProcessedResults.fhir_json;
+        if (lastProcessedResults.fhir_bundle) return JSON.stringify(lastProcessedResults.fhir_bundle, null, 2);
+        return 'No FHIR bundle generated.';
+    };
+    if (btnCopyFhir) setupCopy(btnCopyFhir, getFhirText, 'FHIR JSON copied!');
+    if (btnDownloadFhir) setupDownload(btnDownloadFhir, getFhirText, 'fhir_bundle.json');
 
     // --- Toast UI ---
 

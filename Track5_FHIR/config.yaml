@@ -1,0 +1,31 @@
+# Track 5 – FHIR R4 Extraction Configuration
+model:
+  model_id: "google/medgemma-27b-text-it"
+  backend: vllm
+  # vLLM OpenAI-compatible API endpoint
+  # On cluster: http://n2:8000 (compute node private network)
+  # With SSH tunnel: http://localhost:8000
+  api_base: "http://n2:8000/v1"
+
+generation:
+  temperature: 0.0
+  max_tokens: 2048
+  top_p: 1.0
+  # No sampling - deterministic extraction
+  seed: 42
+
+prompt:
+  # Path to the FHIR R4 extraction system prompt
+  system_prompt_file: "prompts/fhir_r4_extraction.txt"
+
+validation:
+  # Require these resource types in every bundle
+  required_resources:
+    - Patient
+    - Encounter
+    - Condition
+    - Observation
+  # Verify all references resolve within the bundle
+  check_references: true
+  # Verify all IDs are RFC-4122 UUIDs
+  check_uuids: true

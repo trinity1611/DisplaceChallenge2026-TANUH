@@ -32,7 +32,7 @@ class Job(Base):
     language = Column(String, default="hi")  # hi, kn, auto
     status = Column(String, default="UPLOADED")
     # Status values: UPLOADED, DIARIZING, TRANSCRIBING, TOPIC_EXTRACTION,
-    #                SUMMARIZING, COMPLETED, FAILED
+    #                SUMMARIZING, FHIR_EXTRACTION, COMPLETED, FAILED
     progress = Column(Integer, default=0)  # 0-100
     stage_message = Column(String, default="Waiting to start...")
     error_message = Column(Text, nullable=True)
@@ -67,6 +67,10 @@ class Result(Base):
 
     # Track 4 – Dialogue Summarization
     summary = Column(Text, default="")
+
+    # Track 5 – FHIR R4 Extraction
+    fhir_bundle = Column(Text, default="")
+    fhir_time_s = Column(Float, default=0.0)
 
     # Timing
     diarization_time_s = Column(Float, default=0.0)

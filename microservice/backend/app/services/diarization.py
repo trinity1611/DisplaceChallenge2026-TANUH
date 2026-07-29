@@ -102,7 +102,9 @@ class DiarizationService:
             {
                 "num_speakers": int,
                 "segments": [{"start_time": float, "end_time": float,
-                              "speaker_id": str, "duration": float}, ...]
+                              "speaker_id": str, "duration": float}, ...],
+                "rttm_path": str,
+                "elapsed_s": float,
             }
         """
         start_time_wall = time.time()
@@ -110,7 +112,8 @@ class DiarizationService:
         if not self._loaded:
             self.load_model()
 
-        logger.info(f"Running diarization on: {audio_path.name}")
+        audio_path = Path(audio_path)
+        logger.info(f"Running diarization on {audio_path.name}")
 
         # Load audio
         audio, sr = sf.read(str(audio_path), dtype="float32")

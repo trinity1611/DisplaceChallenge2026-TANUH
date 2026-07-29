@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from backend.app.config import settings
 from backend.app.database import engine
 from backend.app import models
-from backend.app.routes import audio, jobs
+from backend.app.routes import audio, jobs, fhir
 from backend.app.schemas import HealthResponse, ModelsStatusResponse, ModelInfo
 
 # ── Logging ──────────────────────────────────────────────────────────
@@ -57,6 +57,7 @@ app.add_middleware(
 
 app.include_router(audio.router)
 app.include_router(jobs.router)
+app.include_router(fhir.router)
 
 
 # ── Health check ─────────────────────────────────────────────────────
@@ -93,6 +94,7 @@ async def models_status():
     from backend.app.services.transcription import transcription_service
     from backend.app.services.topic_extraction import topic_extraction_service
     from backend.app.services.summarization import summarization_service
+    from backend.app.services.fhir_extraction import fhir_extraction_service
 
     return ModelsStatusResponse(
         device=settings.device,
@@ -120,6 +122,12 @@ async def models_status():
                 track="Track 4 – DS",
                 loaded=summarization_service.is_loaded,
                 model_id=settings.llama_model_id,
+            ),
+            ModelInfo(
+                name="MedGemma-27B (FHIR Extraction)",
+                track="Track 5 – FHIR",
+                loaded=fhir_extraction_service.is_loaded,
+                model_id=settings.medgemma_model_id,
             ),
         ],
     )

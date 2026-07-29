@@ -87,12 +87,29 @@ class PipelineResults(BaseModel):
     # Track 4
     summary: str = ""
 
+    # Track 5
+    fhir_bundle: Optional[dict] = None
+    fhir_json: str = ""
+    fhir_time_s: float = 0.0
+
     # Timing
     diarization_time_s: float = 0.0
     asr_time_s: float = 0.0
     topic_time_s: float = 0.0
     summary_time_s: float = 0.0
     total_time_s: float = 0.0
+
+
+
+# ── FHIR Response ────────────────────────────────────────────────────
+
+class FHIRResponse(BaseModel):
+    job_id: str
+    fhir_bundle: Optional[dict] = None
+    fhir_json: str = ""
+    valid: bool = False
+    validation_errors: List[str] = []
+    elapsed_s: float = 0.0
 
 
 # ── Health Check ─────────────────────────────────────────────────────

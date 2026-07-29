@@ -150,8 +150,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 16px;
+    background-color: #d1fae5;
+    padding: 8px;
+    border-radius: 8px;
     margin-bottom: 24px;
 }
 
@@ -618,4 +619,32 @@ body {
 .privacy-text p {
     font-size: 0.95rem;
     color: var(--text-muted);
+}
+
+.audio-dropzone-modern {
+    border: 1.5px dashed #94a3b8;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    background: #f8fafc;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.audio-dropzone-modern:hover {
+    border-color: #0ea5e9;
+    background: #f0f9ff;
+}
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.info-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #0f766e;
+    line-height: 1.5;
+}
+.info-item .info-icon svg {
+    color: #0f766e;
 }

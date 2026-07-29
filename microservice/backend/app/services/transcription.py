@@ -102,6 +102,7 @@ class TranscriptionService:
         if not self._loaded:
             self.load_model()
 
+        audio_path = Path(audio_path)
         logger.info(f"Transcribing {audio_path.name} with {len(diarization_segments)} segments")
 
         # Load full audio

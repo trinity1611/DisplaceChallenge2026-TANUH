@@ -164,6 +164,13 @@ async def get_job_results(job_id: str):
             t.strip() for t in topics_str.split(",") if t.strip()
         ]
 
+        fhir_bundle_dict = None
+        if result.fhir_bundle and result.fhir_bundle.strip():
+            try:
+                fhir_bundle_dict = json.loads(result.fhir_bundle)
+            except json.JSONDecodeError:
+                pass
+
         return PipelineResults(
             job_id=job_id,
             status=job.status,
@@ -174,6 +181,9 @@ async def get_job_results(job_id: str):
             topics=result.topics,
             topics_list=topics_list,
             summary=result.summary,
+            fhir_bundle=fhir_bundle_dict,
+            fhir_json=result.fhir_bundle or "",
+            fhir_time_s=result.fhir_time_s,
             diarization_time_s=result.diarization_time_s,
             asr_time_s=result.asr_time_s,
             topic_time_s=result.topic_time_s,
